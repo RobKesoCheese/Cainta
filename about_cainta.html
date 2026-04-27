@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Cainta | Cinematic Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Light Grey Theatrical Loading Curtain -->
+  <div class="loading-curtain" id="loadingCurtain">
+    <div class="loader-text">CAINTA</div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
+    <div class="header-center">
+      <a href="index.html"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></a>
+    </div>
+    <div class="header-right">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </button>
+      
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <ul class="hList">
+          <li><a href="index.html" class="menu"><h2 class="menu-title">Home</h2></a></li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_2nd">About Cainta</h2>
+              <ul class="menu-dropdown">
+                <li><a href="about_cainta.html#history">History</a></li>
+                <li><a href="about_cainta.html#culture">Culture</a></li>
+                <li><a href="index.html#tourist-spots">Tourist Spots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_3rd">Government</h2>
+              <ul class="menu-dropdown">
+                <li><a href="officials.html">Municipal Officials</a></li>
+                <li><a href="services.html">Departments & Offices</a></li>
+                <li><a href="disclosure.html">Full Disclosure</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#contact" class="menu"><h2 class="menu-title menu-title_4th">Contact Us</h2></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero about-hero" id="home">
+    <div class="hero-background" style="background-image: url('pics/main_pg_pics/main_hall_pic.jpg'); background-position: center 30%;"></div> 
+    <div class="hero-overlay" style="background: rgba(0,0,0,0.65);"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-line"><span class="title-text">ABOUT</span></span><br>
+        <span class="title-line"><span class="title-text">CAINTA</span></span>
+      </h1>
+    </div>
+  </section>
+
+  <div class="content-wrapper">
+    
+    <!-- THE MUNICIPALITY SLIDER SECTION -->
+    <section class="about-section" id="municipality">
+      <div class="about-container">
+        <h2 class="about-section-title slide-up">THE MUNICIPALITY</h2>
+        
+        <div class="about-slider-wrapper slide-up">
+          <button class="slider-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="about-slider-track">
+            <div class="about-slider">
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/1.png" onerror="this.src='about_cainta_pics/first_caro/1.jpg'" alt="Municipality Image 1"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/2.png" onerror="this.src='about_cainta_pics/first_caro/2.jpg'" alt="Municipality Image 2"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/3.png" onerror="this.src='about_cainta_pics/first_caro/3.jpg'" alt="Municipality Image 3"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/4.png" onerror="this.src='about_cainta_pics/first_caro/4.jpg'" alt="Municipality Image 4"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/5.png" onerror="this.src='about_cainta_pics/first_caro/5.jpg'" alt="Municipality Image 5"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/6.png" onerror="this.src='about_cainta_pics/first_caro/6.jpg'" alt="Municipality Image 6"></div>
+              <div class="about-slide"><img src="about_cainta_pics/first_caro/7.png" onerror="this.src='about_cainta_pics/first_caro/7.jpg'" alt="Municipality Image 7"></div>
+            </div>
+          </div>
+
+          <button class="slider-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="slider-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL BLEED HISTORY SECTION -->
+    <section class="about-section bg-secondary" id="history">
+      <div class="about-container">
+        <h2 class="about-section-title slide-up">HISTORY</h2>
+        <div class="about-text-block slide-up">
+          <p>The town name “Cainta” was derived from the legend of Ka Inta. 'Ka' refers to a term of respect for the elders, and 'Inta', short for Jacinta.</p>
+          <p>Jacinta was a well-known rich and generous lady who helped the hungry and the sick. Her house was open to all those who were in need. When she passed away, the people named the town after her, for her good deeds. Another etymology of Cainta is said to be from the two Tagalog words, “Kain Ta”.</p>
+          <p>As a consequence of the Seven Years War between Britain and Spain, the British invaded Manila in 1762. The British brought along Indian soldiers or sepoys to attack Manila then a Spanish colony. The war ended soon, and Manila was back to Spanish control. However, the Sepoy soldiers chose to stay in Cainta, and settled with the natives. Today, descendants of the Sepoys are very much visible in Cainta, bearing dark skin and prominent Indian facial features.</p>
+          <p>Influenced by the Indians or sepoys, natives of Cainta learned to make bebinca, a traditional Indian pudding. Cainta's own pudding is now called the bibingka, it is a renowned delicacy along with suman and latik. Bibingka, suman and latik are Cainta's famous delicacies and is in fact the core of its yearly Sumbingtik Festival.</p>
+        </div>
+        
+        <div class="about-slider-wrapper slide-up" style="margin-top: 3rem;">
+          <button class="slider-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="about-slider-track">
+            <div class="about-slider">
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/1.png" onerror="this.src='about_cainta_pics/second_caro/1.jpg'" alt="Cainta History 1"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/2.png" onerror="this.src='about_cainta_pics/second_caro/2.jpg'" alt="Cainta History 2"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/3.png" onerror="this.src='about_cainta_pics/second_caro/3.jpg'" alt="Cainta History 3"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/4.png" onerror="this.src='about_cainta_pics/second_caro/4.jpg'" alt="Cainta History 4"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/5.png" onerror="this.src='about_cainta_pics/second_caro/5.jpg'" alt="Cainta History 5"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/6.png" onerror="this.src='about_cainta_pics/second_caro/6.jpg'" alt="Cainta History 6"></div>
+              <div class="about-slide"><img src="about_cainta_pics/second_caro/7.png" onerror="this.src='about_cainta_pics/second_caro/7.jpg'" alt="Cainta History 7"></div>
+            </div>
+          </div>
+
+          <button class="slider-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="slider-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURE SECTION -->
+    <section class="about-section" id="culture">
+      <div class="about-container">
+        <h2 class="about-section-title slide-up">CULTURE</h2>
+        <div class="about-text-block slide-up">
+          <h3 class="about-subtitle">THE SENAKULO</h3>
+          <p>Centuries of Spanish occupation of Manila and its neighboring areas has greatly influenced the culture of Cainta. Notably, the Senakulo is a product of such occupation.</p>
+          <p>The Senakulo, or commonly known as the passion play on the life of Jesus Christ, finds its beginnings in Cainta sometime in 1904. It originated from Barrio Dayap, which is now the entire area of Barangays Sta. Rosa, Sto. Nino and Sto. Domingo. Since most of the residents then believed that calamities were brought on by evil spirits, they erected a cross on a vacant lot and lit the same every night. One night, during Lent, a distinct fragrance emanated from the cross and news of this spread out quickly.</p>
+          <p>Since then, the residents of Barrio Dayap and the whole town of Cainta have vowed to read the Pasyon, a narrative of the passion, death and resurrection of Jesus Christ, told in a lyrical manner. To add to this devotion, the residents began to stage the passion play, Senakulo, during the Lenten season, beginning Palm Sunday until Easter Sunday. To this day, this tradition is still being observed by the whole town, and several groups in Cainta participate in the Good Friday procession along Barrio Dayap.</p>
+          <p>To date, there are eighteen (18) groups engaged in the yearly Senakulo and Panata Lenten commemoration. The oldest are Samahang Krus sa Nayon ng Cainta and Samahang Nazareno. The Samahang Nazareno has the distinction of being awarded by the Cultural Center of the Philippines the Gawad CCP for the Arts in 1993.</p>
+        </div>
+
+        <div class="about-slider-wrapper slide-up" style="margin-top: 3rem;">
+          <button class="slider-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="about-slider-track">
+            <div class="about-slider">
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (1).avif" alt="Senakulo 1"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (2).avif" alt="Senakulo 2"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (3).avif" alt="Senakulo 3"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (4).avif" alt="Senakulo 4"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (5).avif" alt="Senakulo 5"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (6).avif" alt="Senakulo 6"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (7).avif" alt="Senakulo 7"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (8).avif" alt="Senakulo 8"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (9).avif" alt="Senakulo 9"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (10).avif" alt="Senakulo 10"></div>
+              <div class="about-slide"><img src="about_cainta_pics/senakulo/senakulo (11).avif" alt="Senakulo 11"></div>
+            </div>
+          </div>
+
+          <button class="slider-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="slider-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMATIC AWARDS STICKY LAYOUT -->
+    <section class="about-section bg-secondary" id="awards">
+      <div class="about-container">
+        <h2 class="about-section-title slide-up">AWARDS & RECOGNITION</h2>
+        
+        <div class="awards-sticky-layout slide-up">
+          
+          <!-- Left Column: Fluid Text Scroll -->
+          <div class="awards-text-column">
+            
+            <div class="award-block">
+              <h3 class="award-year-title">2024</h3>
+              <ul class="clean-award-list">
+                <li><span>Top 1 Most Competitive Municipality</span> - Cities and Municipalities Competitiveness Summit</li>
+                <li><span>Top 1 Most Competitive in Economic Dynamism</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>Top 1 Intellectual Property Filing</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>Top 2 Most Competitive in Infrastructure</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>Outstanding Practice Upcycling and Crafts Production</span> - DENR-EMB CALABARZON</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2023</h3>
+              <ul class="clean-award-list">
+                <li><span>Top 1 Most Competitive Municipality</span> - Cities and Municipalities Competitiveness Summit</li>
+                <li><span>Top 1 Most Competitive in Economic Dynamism</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>2nd Place Top Filer Award for Intellectual Property</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>Top 3 Most Competitive in Infrastructure</span> (1st to 2nd Class Municipality) - CMCS</li>
+                <li><span>1st Runner Up - Best Tourism Event: Religious Festival</span> - ATOP-DOT Pearl Awards</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2022</h3>
+              <ul class="clean-award-list">
+                <li><span>2nd Place Municipality</span> - Highest Locally Sourced Revenues Hall of Fame</li>
+                <li><span>Gawad Kalasag Seal of Excellence</span> - Gawad KALASAG National Awarding</li>
+                <li><span>Top 3 Most Competitive Municipality</span> - 10th Cities and Municipalities Competitiveness Summit</li>
+                <li><span>OCD 4A</span> - Cainta Disaster Council</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2021</h3>
+              <ul class="clean-award-list">
+                <li><span>1st Place Municipality</span> - Highest Locally Sourced Revenues for FY2021</li>
+                <li><span>Overall Most Competitive Municipality</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Economic Dynamism</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Governance Efficiency</span> - CALABARZON Champion Award</li>
+                <li><span>3rd Place in Infrastructure and Resiliency</span> - CALABARZON Champion Award</li>
+                <li><span>Cleanest Public Market</span> - Provincial Government of Rizal</li>
+                <li><span>Plaque of Commendation</span> - Municipal DRRM Council CALABARZON</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2020</h3>
+              <ul class="clean-award-list">
+                <li><span>Overall Most Competitive Municipality</span> - 8th Regional Competitiveness Summit</li>
+                <li><span>1st Place in Government Efficiency</span> - 8th Regional Competitiveness Summit</li>
+                <li><span>1st Place in Economic Dynamism</span> - 8th Regional Competitiveness Summit</li>
+                <li><span>2nd Place in Government Infrastructure</span> - 8th Regional Competitiveness Summit</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2019</h3>
+              <ul class="clean-award-list">
+                <li><span>Overall Most Competitive Municipality</span> - 7th Regional Competitiveness Summit</li>
+                <li><span>1st Place in Government Efficiency</span> - 7th Regional Competitiveness Summit</li>
+                <li><span>2nd Place in Government Infrastructure</span> - 7th Regional Competitiveness Summit</li>
+                <li><span>3rd Place in Economic Dynamism</span> - 7th Regional Competitiveness Summit</li>
+                <li><span>USAID-CRS</span></li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2018</h3>
+              <ul class="clean-award-list">
+                <li><span>1st Place in Economic Dynamism</span> - 6th Regional Competitiveness Summit</li>
+                <li><span>2nd Place Overall Most Competitive Municipality</span> - 6th Regional Competitiveness Summit</li>
+                <li><span>3rd Place in Infrastructure Facilities</span> - 6th Regional Competitiveness Summit</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2017</h3>
+              <ul class="clean-award-list">
+                <li><span>1st Place Resiliency Pillar</span> - CMCI Competitiveness</li>
+                <li><span>Overall Most Competitive Municipality</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Infrastructure Facilities</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Economic Dynamism</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Resiliency</span> - CALABARZON Champion Award</li>
+                <li><span>2nd Place in Government Efficiency</span> - CALABARZON Champion Award</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2016</h3>
+              <ul class="clean-award-list">
+                <li><span>Plaque of Recognition to Cainta Municipal DRRM Council</span> - Gawad KALASAG</li>
+                <li><span>Overall Most Competitive Municipality</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Infrastructure Facilities</span> - CALABARZON Champion Award</li>
+                <li><span>1st Place in Government Efficiency</span> - CALABARZON Champion Award</li>
+                <li><span>2nd Place in Economic Dynamism</span> - CALABARZON Champion Award</li>
+                <li><span>Gawad Katarungan</span> - Cainta Catholic College</li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2015</h3>
+              <ul class="clean-award-list">
+                <li><span>4th Most Competitive Municipality</span> - Regional Development Council</li>
+                <li><span>Most Competitive LGU Awardee</span></li>
+                <li><span>Outstanding Mayor for CALABARZON</span> - Gawad Sulo ng Bayan Awardee</li>
+                <li><span>Meralco Luminaries</span></li>
+              </ul>
+            </div>
+
+            <div class="award-block">
+              <h3 class="award-year-title">2014</h3>
+              <ul class="clean-award-list">
+                <li><span>Seal of Good Local Governance</span> - Good Financial Housekeeping</li>
+                <li><span>Outstanding Elderly Citizens Program</span> - 2nd Business Mirror DANGAL AWARDS</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: Sticky Infinite Photo Reel -->
+          <div class="awards-visual-column" id="awardsVisual">
+            <div class="vertical-marquee-container">
+              <div class="v-marquee-track" id="awardsMarqueeTrack">
+                <!-- Primary set — images 1 to 26 -->
+                <div class="v-marquee-content">
+                  <img src="about_cainta_pics/awards/cainta_awards (1).avif" class="award-cert" alt="Award 1">
+                  <img src="about_cainta_pics/awards/cainta_awards (2).avif" class="award-cert" alt="Award 2">
+                  <img src="about_cainta_pics/awards/cainta_awards (3).avif" class="award-cert" alt="Award 3">
+                  <img src="about_cainta_pics/awards/cainta_awards (4).avif" class="award-cert" alt="Award 4">
+                  <img src="about_cainta_pics/awards/cainta_awards (5).avif" class="award-cert" alt="Award 5">
+                  <img src="about_cainta_pics/awards/cainta_awards (6).avif" class="award-cert" alt="Award 6">
+                  <img src="about_cainta_pics/awards/cainta_awards (7).avif" class="award-cert" alt="Award 7">
+                  <img src="about_cainta_pics/awards/cainta_awards (8).avif" class="award-cert" alt="Award 8">
+                  <img src="about_cainta_pics/awards/cainta_awards (9).avif" class="award-cert" alt="Award 9">
+                  <img src="about_cainta_pics/awards/cainta_awards (10).avif" class="award-cert" alt="Award 10">
+                  <img src="about_cainta_pics/awards/cainta_awards (11).avif" class="award-cert" alt="Award 11">
+                  <img src="about_cainta_pics/awards/cainta_awards (12).avif" class="award-cert" alt="Award 12">
+                  <img src="about_cainta_pics/awards/cainta_awards (13).avif" class="award-cert" alt="Award 13">
+                  <img src="about_cainta_pics/awards/cainta_awards (14).avif" class="award-cert" alt="Award 14">
+                  <img src="about_cainta_pics/awards/cainta_awards (15).avif" class="award-cert" alt="Award 15">
+                  <img src="about_cainta_pics/awards/cainta_awards (16).avif" class="award-cert" alt="Award 16">
+                  <img src="about_cainta_pics/awards/cainta_awards (17).avif" class="award-cert" alt="Award 17">
+                  <img src="about_cainta_pics/awards/cainta_awards (18).avif" class="award-cert" alt="Award 18">
+                  <img src="about_cainta_pics/awards/cainta_awards (19).avif" class="award-cert" alt="Award 19">
+                  <img src="about_cainta_pics/awards/cainta_awards (20).avif" class="award-cert" alt="Award 20">
+                  <img src="about_cainta_pics/awards/cainta_awards (21).avif" class="award-cert" alt="Award 21">
+                  <img src="about_cainta_pics/awards/cainta_awards (22).avif" class="award-cert" alt="Award 22">
+                  <img src="about_cainta_pics/awards/cainta_awards (23).avif" class="award-cert" alt="Award 23">
+                  <img src="about_cainta_pics/awards/cainta_awards (24).avif" class="award-cert" alt="Award 24">
+                  <img src="about_cainta_pics/awards/cainta_awards (25).avif" class="award-cert" alt="Award 25">
+                  <img src="about_cainta_pics/awards/cainta_awards (26).avif" class="award-cert" alt="Award 26">
+                </div>
+                <!-- Duplicate set — exact mirror for seamless infinite loop -->
+                <div class="v-marquee-content" aria-hidden="true">
+                  <img src="about_cainta_pics/awards/cainta_awards (1).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (2).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (3).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (4).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (5).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (6).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (7).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (8).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (9).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (10).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (11).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (12).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (13).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (14).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (15).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (16).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (17).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (18).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (19).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (20).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (21).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (22).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (23).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (24).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (25).avif" class="award-cert" alt="">
+                  <img src="about_cainta_pics/awards/cainta_awards (26).avif" class="award-cert" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW GSAP PINNED HORIZONTAL SCROLL BARANGAYS SECTION -->
+    <section class="about-section brgy-pin-section" id="barangays">
+      <div class="brgy-scroll-wrapper">
+        <div class="brgy-intro-lock">
+          <h2 class="about-section-title">OUR BARANGAYS</h2>
+          <p>Cainta is composed of seven (7) progressive and culturally vibrant barangays, each contributing directly to the rich heritage and continuous growth of the municipality. <br><br><strong>Scroll to explore &rarr;</strong></p>
+        </div>
+        
+        <div class="brgy-horizontal-track">
+          
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ANDRES.avif" alt="San Andres Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/SAN ANDRES.avif" class="brgy-seal-small" alt="San Andres Seal">
+                <h3>San Andres</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Benson Conde</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8646-0868 / 0917-5548888</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:barangaysanandres.bc@gmail.com" style="color: var(--text-blue); text-decoration: none;">barangaysanandres.bc@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>Sampaguita St., PFCI, Brgy. San Andres, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STO. DOMINGO.avif" alt="Sto Domingo Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/STO. DOMINGO.avif" class="brgy-seal-small" alt="Sto Domingo Seal">
+                <h3>Sto. Domingo</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Janice T. Curia</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8570-4492 (Office) / 8535-1183 (Command Center)</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:barangaystodomingo.jgt@yahoo.com" style="color: var(--text-blue); text-decoration: none;">barangaystodomingo.jgt@yahoo.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>Gloria Street, Marick Subd., Brgy. Sto. Domingo, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ISIDRO.avif" alt="San Isidro Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/SAN ISIDRO.avif" class="brgy-seal-small" alt="San Isidro Seal">
+                <h3>San Isidro</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Ricardo S. Licup, Jr.</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8681-8982 (Balanti) / 8242-5217 (Karangalan)</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:angatsanisidro@gmail.com" style="color: var(--text-blue); text-decoration: none;">angatsanisidro@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span>
+                  <span style="font-size: 0.85rem;">
+                    <strong>BALANTI:</strong> Isidro Ave., Sitio Balanti, Cainta, Rizal<br>
+                    <strong>KARANGALAN:</strong> Imelda Ave. Gate 2 Phase 1A, Karangalan Village, Cainta, Rizal<br>
+                    <strong>GREENPARK:</strong> Yellow Bell Street, Zone 3, Greenpark Subd., Brgy. San Isidro, Cainta, Rizal<br>
+                    <strong>HALANG:</strong> 6th St., Zone 2, Sitio Halang, Brgy. San Isidro, Cainta, Rizal
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN JUAN.avif" alt="San Juan Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/SAN JUAN.avif" class="brgy-seal-small" alt="San Juan Seal">
+                <h3>San Juan</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Normita N. Felix</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8291-5078 / 8655-1679</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:bsjcainta@gmail.com" style="color: var(--text-blue); text-decoration: none;">bsjcainta@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>L. Santos St., Brgy. San Juan, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STO. NIÑO.avif" alt="Sto Niño Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/STO. NIÑO.avif" class="brgy-seal-small" alt="Sto Niño Seal">
+                <h3>Sto. Niño</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Gian Carlo C. Cruz</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>0917-1472265</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:onestonino2018@gmail.com" style="color: var(--text-blue); text-decoration: none;">onestonino2018@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>M. Javier St. Corner NN Fernandez St., Snt. Dominic Subd. II, Brgy. Sto. Niño, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ROQUE.avif" alt="San Roque Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/SAN ROQUE.avif" class="brgy-seal-small" alt="San Roque Seal">
+                <h3>San Roque</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Felix C. Taguba III</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>0920-9250113 / 0908-8725572</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:barangaysanroque52@gmail.com" style="color: var(--text-blue); text-decoration: none;">barangaysanroque52@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>Amang Rodriguez Avenue, Brgy. San Roque, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STA. ROSA.avif" alt="Sta Rosa Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="about_cainta_pics/brgy/STA. ROSA.avif" class="brgy-seal-small" alt="Sta Rosa Seal">
+                <h3>Sta. Rosa</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Punong Barangay</span><span>Hon. Richard B. dela Cruz</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8693-9084 / 0998-8693810</span></div>
+                <div class="brgy-data-item"><span>Email</span><span><a href="mailto:chard.delacruz.rdc@gmail.com" style="color: var(--text-blue); text-decoration: none;">chard.delacruz.rdc@gmail.com</a></span></div>
+                <div class="brgy-data-item"><span>Address</span><span>139 J.P Rizal St., Brgy. Sta. Rosa, Cainta, Rizal</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-top">
+        <div class="footer-brand">
+           <img src="pics/main_pg_pics/cainta_logo.png" alt="Cainta Logo" class="footer-logo">
+           <p class="footer-desc">Building a progressive, inclusive, and culturally rich municipality with transparent governance and user-friendly digital solutions.</p>
+           <div class="social-links">
+             <a href="https://www.facebook.com/onecainta.onecainta" target="_blank" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+             </a>
+           </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-col">
+            <h4>Navigation</h4>
+            <a href="index.html">Home</a>
+            <a href="about_cainta.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="link-col">
+            <h4>Resources</h4>
+            <a href="disclosure.html">Full Disclosure</a>
+            <a href="services.html#res-ord">Local Ordinances</a>
+            <a href="services.html#res-ord">Resolutions</a>
+            <a href="services.html#online">E-Payment</a>
+          </div>
+          <div class="link-col">
+            <h4>Support</h4>
+            <a href="index.html#hotlines">Hotlines</a>
+            <a href="services.html">Departments</a>
+            <a href="about_cainta.html#barangays">Barangays</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="link-col">
+            <h4>Government</h4>
+            <a href="officials.html">Municipal Officials</a>
+            <a href="services.html">Departments &amp; Offices</a>
+            <a href="disclosure.html">Full Disclosure</a>
+            <a href="services.html#online">Online Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 Municipality of Cainta. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- end .content-wrapper -->
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

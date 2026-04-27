@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Services | Municipality of Cainta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="services-page">
+
+  <!-- STANDARD HEADER FIX -->
+  <header class="site-header" id="header">
+    <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
+    <div class="header-center">
+      <a href="index.html"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></a>
+    </div>
+    <div class="header-right">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </button>
+      
+      <!-- THE UNIFIED DROPDOWN -->
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <ul class="hList">
+          <li><a href="index.html" class="menu"><h2 class="menu-title">Home</h2></a></li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_2nd">About Cainta</h2>
+              <ul class="menu-dropdown">
+                <li><a href="about_cainta.html#history">History</a></li>
+                <li><a href="about_cainta.html#culture">Culture</a></li>
+                <li><a href="index.html#tourist-spots">Tourist Spots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_3rd">Government</h2>
+              <ul class="menu-dropdown">
+                <li><a href="officials.html">Municipal Officials</a></li>
+                <li><a href="services.html">Departments & Offices</a></li>
+                <li><a href="disclosure.html">Full Disclosure</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#contact" class="menu"><h2 class="menu-title menu-title_4th">Contact Us</h2></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="services-hub-wrapper">
+    <aside class="hub-sidebar">
+      <!-- DEPARTMENTS AND OFFICES CONTEXT ADDED -->
+      <div class="sidebar-header" style="margin-bottom: 2rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-main); margin-bottom: 0.5rem;">Citizen Services</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Directory of Municipal Departments and Offices.</p>
+      </div>
+
+      <nav class="nav-dock" id="navDock">
+        <a href="#" class="dock-link active" data-target="covid">COVID-19</a>
+        <a href="#" class="dock-link" data-target="health">Health Services</a>
+        <a href="#" class="dock-link" data-target="hospital">Municipal Hospital</a>
+        <a href="#" class="dock-link" data-target="id-app">ID Application</a>
+        <a href="#" class="dock-link" data-target="college">College</a>
+        <a href="#" class="dock-link" data-target="online">Online Services</a>
+        <a href="#" class="dock-link" data-target="res-ord">Resolutions & Ordinances</a>
+        <a href="#" class="dock-link" data-target="others">Others</a>
+      </nav>
+    </aside>
+
+    <section class="hub-stage" id="hubStage">
+      
+      <!-- COVID-19 -->
+      <div class="service-content active" id="covid">
+        <h1 class="hub-title">COVID-19 Services</h1>
+        <div class="info-card">
+          <h3>Vaccination, Testing & Certification</h3>
+          <p>Access the latest local updates, booster schedules, and digital health certification portals.</p>
+          <a href="https://www.cainta.gov.ph/covid19-2025" target="_blank" class="action-btn">View COVID Portal</a>
+        </div>
+      </div>
+
+      <!-- HEALTH -->
+      <div class="service-content" id="health">
+        <h1 class="hub-title">Health Services</h1>
+        <div class="info-card">
+          <h3>Health Centers & Services</h3>
+          <p>Information on Barangay Health Centers, consultations, and maternal care.</p>
+          <a href="https://www.cainta.gov.ph/healthcentersandservices2025" target="_blank" class="action-btn">View Health Centers</a>
+        </div>
+        <div class="info-card">
+          <h3>Free Pneumonia & Flu Vaccination</h3>
+          <p>Annual immunization programs for seniors and at-risk populations.</p>
+          <a href="https://www.cainta.gov.ph/antipneumoniaandfluvax" target="_blank" class="action-btn">View Vax Schedule</a>
+        </div>
+        <div class="info-card">
+          <h3>Libreng Tuli</h3>
+          <p>Our annual medical mission providing safe, free circumcision for local youth.</p>
+          <a href="https://www.cainta.gov.ph/libreng-tuli" target="_blank" class="action-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- HOSPITAL -->
+      <div class="service-content" id="hospital">
+        <h1 class="hub-title">Municipal Hospital</h1>
+        <div class="info-card">
+          <h3>Cainta Municipal Hospital & Medical Arts</h3>
+          <p>Comprehensive medical care including specialized Medical Arts services. We are dedicated to providing accessible healthcare to all residents.</p>
+          <a href="https://www.cainta.gov.ph/caintahospital" target="_blank" class="action-btn">Hospital Directory</a>
+        </div>
+      </div>
+
+      <!-- ID APPLICATION -->
+      <div class="service-content" id="id-app">
+        <h1 class="hub-title">ID Application</h1>
+        <div class="info-card">
+          <h3>Senior Citizen, Solo Parents, & PWDs</h3>
+          <p>Streamlined application processes for government-mandated discount IDs.</p>
+          <a href="https://www.cainta.gov.ph/idapplication" target="_blank" class="action-btn">Download Requirements</a>
+        </div>
+      </div>
+
+      <!-- COLLEGE -->
+      <div class="service-content" id="college">
+        <h1 class="hub-title">One Cainta College</h1>
+        <div class="info-card">
+          <h3>Academic Excellence</h3>
+          <p>Providing quality tertiary education for the youth of Cainta.</p>
+          <a href="https://www.cainta.gov.ph/onecaintacollege" target="_blank" class="action-btn">Visit College Portal</a>
+        </div>
+      </div>
+
+      <!-- ONLINE SERVICES -->
+      <div class="service-content" id="online">
+        <h1 class="hub-title">Online Services</h1>
+        <div class="info-card">
+          <h3>E-Payment (Real Property Tax)</h3>
+          <p>Conveniently pay your real property taxes online.</p>
+          <a href="https://epay.cainta.gov.ph/WebPortal/Register.aspx" target="_blank" class="action-btn">Pay Taxes Now</a>
+        </div>
+        <div class="info-card">
+          <h3>Health Certificate</h3>
+          <p>Process your digital health certification applications remotely.</p>
+          <a href="https://caintahealthcertificate.com/" target="_blank" class="action-btn">Apply Online</a>
+        </div>
+        <div class="info-card">
+          <h3>Business Permit (New & Renewal)</h3>
+          <p>Apply for and renew your commercial business permits seamlessly.</p>
+          <a href="https://caintabusinesspermit.com/" target="_blank" class="action-btn">Permit Portal</a>
+        </div>
+      </div>
+
+      <!-- RESOLUTIONS -->
+      <div class="service-content" id="res-ord">
+        <h1 class="hub-title">Resolutions & Ordinances</h1>
+        <div class="info-card">
+          <h3>Local Legislative Documents</h3>
+          <p>Access public records of municipal resolutions and ordinances passed by the Sangguniang Bayan.</p>
+          <a href="https://www.cainta.gov.ph/resolutionsandordinances" target="_blank" class="action-btn">Browse Archives</a>
+        </div>
+      </div>
+
+      <!-- OTHERS -->
+      <div class="service-content" id="others">
+        <h1 class="hub-title">Other Services</h1>
+        <div class="info-card">
+          <h3>Free Funeral & Cremation</h3>
+          <p>Support for families in need regarding final rites.</p>
+          <a href="https://www.cainta.gov.ph/funeralandcremation" target="_blank" class="action-btn">View Details</a>
+        </div>
+        <div class="info-card">
+          <h3>Free Anti-Rabies Vaccination</h3>
+          <p>Protecting the community and pets.</p>
+          <a href="https://www.cainta.gov.ph/anti-rabies-vaccination" target="_blank" class="action-btn">View Schedule</a>
+        </div>
+        <div class="info-card">
+          <h3>Free Spay Program</h3>
+          <p>Responsible pet ownership support for residents.</p>
+          <a href="https://www.cainta.gov.ph/free-spay-program" target="_blank" class="action-btn">View Schedule</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER ADDED -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+         <img src="pics/main_pg_pics/cainta_logo.png" alt="Cainta Logo" class="footer-logo">
+         <p class="footer-desc">Building a progressive, inclusive, and culturally rich municipality with transparent governance and user-friendly digital solutions.</p>
+         <div class="social-links">
+           <a href="https://www.facebook.com/onecainta.onecainta" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+           </a>
+         </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="about_cainta.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="link-col">
+          <h4>Resources</h4>
+          <a href="disclosure.html">Full Disclosure</a>
+          <a href="services.html#res-ord">Local Ordinances</a>
+          <a href="services.html#res-ord">Resolutions</a>
+          <a href="services.html#online">E-Payment</a>
+        </div>
+        <div class="link-col">
+          <h4>Support</h4>
+          <a href="index.html#hotlines">Hotlines</a>
+          <a href="services.html">Departments</a>
+          <a href="about_cainta.html#barangays">Barangays</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="link-col">
+          <h4>Government</h4>
+          <a href="officials.html">Mayor's Office</a>
+          <a href="officials.html">Officials</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Municipality of Cainta. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+***
+
+### 5. `disclosure.html` (Added Header/Footer, Fixed Navigation, Clickable Cards via CSS)
+```html
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Disclosure | Municipality of Cainta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="services-page">
+
+  <!-- STANDARD HEADER FIX -->
+  <header class="site-header" id="header">
+    <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
+    <div class="header-center">
+      <a href="index.html"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></a>
+    </div>
+    <div class="header-right">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </button>
+      
+      <!-- THE UNIFIED DROPDOWN -->
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <ul class="hList">
+          <li><a href="index.html" class="menu"><h2 class="menu-title">Home</h2></a></li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_2nd">About Cainta</h2>
+              <ul class="menu-dropdown">
+                <li><a href="about_cainta.html#history">History</a></li>
+                <li><a href="about_cainta.html#culture">Culture</a></li>
+                <li><a href="index.html#tourist-spots">Tourist Spots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_3rd">Government</h2>
+              <ul class="menu-dropdown">
+                <li><a href="officials.html">Municipal Officials</a></li>
+                <li><a href="services.html">Departments & Offices</a></li>
+                <li><a href="disclosure.html">Full Disclosure</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#contact" class="menu"><h2 class="menu-title menu-title_4th">Contact Us</h2></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="services-hub-wrapper">
+    <aside class="hub-sidebar">
+      <div style="margin-bottom: 2rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-main); margin-bottom: 0.5rem;">Transparency Board</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Committed to the Full Disclosure Policy of the DILG.</p>
+      </div>
+      <nav class="nav-dock" id="navDock">
+        <a href="#" class="dock-link active" data-target="budget">Annual Budgets</a>
+        <a href="#" class="dock-link" data-target="procurement">Procurement Plans</a>
+        <a href="#" class="dock-link" data-target="sre">Statement of Receipts (SRE)</a>
+        <a href="#" class="dock-link" data-target="audit">Audit Reports</a>
+        <a href="#" class="dock-link" data-target="bids">Bids and Awards</a>
+      </nav>
+    </aside>
+
+    <section class="hub-stage" id="hubStage">
+      
+      <!-- BUDGETS -->
+      <div class="service-content active" id="budget">
+        <h1 class="hub-title">Annual Budgets</h1>
+        
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2025 Annual Budget Report</h3>
+            <p>Approved budget allocation for the fiscal year 2025.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2024 Annual Budget Report</h3>
+            <p>Approved budget allocation for the fiscal year 2024.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2023 Annual Budget Report</h3>
+            <p>Approved budget allocation for the fiscal year 2023.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+      </div>
+
+      <!-- PROCUREMENT -->
+      <div class="service-content" id="procurement">
+        <h1 class="hub-title">Procurement Plans</h1>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2025 Annual Procurement Plan (APP)</h3>
+            <p>Consolidated procurement requirements for 2025.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2024 Annual Procurement Plan (APP)</h3>
+            <p>Consolidated procurement requirements for 2024.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+      </div>
+
+      <!-- SRE -->
+      <div class="service-content" id="sre">
+        <h1 class="hub-title">Statement of Receipts and Expenditures</h1>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>Q4 2024 SRE Report</h3>
+            <p>Financial statement covering October to December 2024.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>Q3 2024 SRE Report</h3>
+            <p>Financial statement covering July to September 2024.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+      </div>
+
+      <!-- AUDIT -->
+      <div class="service-content" id="audit">
+        <h1 class="hub-title">Audit Reports</h1>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>2024 COA Annual Audit Report</h3>
+            <p>Official findings from the Commission on Audit.</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">Download PDF</a>
+        </div>
+      </div>
+
+      <!-- BIDS -->
+      <div class="service-content" id="bids">
+        <h1 class="hub-title">Bids and Awards Committee</h1>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>Invitation to Bid: Road Rehabilitation Phase 2</h3>
+            <p>Posted: October 12, 2025</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">View Details</a>
+        </div>
+        <div class="info-card flex-row-card">
+          <div class="flex-info">
+            <h3>Notice of Award: Medical Supplies 2025</h3>
+            <p>Posted: September 28, 2025</p>
+          </div>
+          <a href="#" class="action-btn outline-btn">View Details</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER ADDED -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+         <img src="pics/main_pg_pics/cainta_logo.png" alt="Cainta Logo" class="footer-logo">
+         <p class="footer-desc">Building a progressive, inclusive, and culturally rich municipality with transparent governance and user-friendly digital solutions.</p>
+         <div class="social-links">
+           <a href="https://www.facebook.com/onecainta.onecainta" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+           </a>
+         </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="about_cainta.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="link-col">
+          <h4>Resources</h4>
+          <a href="disclosure.html">Full Disclosure</a>
+          <a href="services.html#res-ord">Local Ordinances</a>
+          <a href="services.html#res-ord">Resolutions</a>
+          <a href="services.html#online">E-Payment</a>
+        </div>
+        <div class="link-col">
+          <h4>Support</h4>
+          <a href="index.html#hotlines">Hotlines</a>
+          <a href="services.html">Departments</a>
+          <a href="about_cainta.html#barangays">Barangays</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="link-col">
+          <h4>Government</h4>
+          <a href="officials.html">Mayor's Office</a>
+          <a href="officials.html">Officials</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Municipality of Cainta. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
