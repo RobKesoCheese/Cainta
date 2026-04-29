@@ -29,10 +29,6 @@
     </div>
     
     <div class="header-right">
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <div class="hamburger"><span></span><span></span><span></span></div>
-      </button>
-
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -41,6 +37,14 @@
         <a href="about_cainta.html">About Cainta</a>
         <a href="#contact">Contact Us</a>
       </nav>
+
+      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </button>
       
       <nav class="dropdown-menu" id="dropdownMenu">
         <ul class="hList">
@@ -388,7 +392,7 @@
         <div class="brgy-scroll-wrapper">
           <div class="brgy-intro-lock">
             <h2 class="about-section-title">OUR BARANGAYS</h2>
-            <p>Cainta is composed of seven (7) progressive and culturally vibrant barangays, each contributing directly to the rich heritage and continuous growth of the municipality. <br><br><strong>Scroll to explore &rarr;</strong></p>
+            <p>Cainta is composed of seven (7) progressive and culturally vibrant barangays, each contributing directly to the rich heritage and continuous growth of the municipality. <br><br><strong>Scroll to explore →</strong></p>
           </div>
           
           <div class="brgy-horizontal-track">
@@ -559,7 +563,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; 2026 Municipality of Cainta. All rights reserved.</span>
+          <span>&copy; 2024 Municipality of Cainta. All rights reserved.</span>
           <div class="footer-legal">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Use</a>
@@ -570,17 +574,54 @@
 
     </div></main>
 
+  <div class="search-modal" id="searchModal">
+    <button class="modal-close" id="closeSearchModal">×</button>
+    <div class="search-container" data-lenis-prevent>
+      <h2 class="search-title">Search Cainta Portal</h2>
+      <div class="search-input-wrapper">
+        <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Search departments, services, officials, history..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <h4>Cainta Assistant</h4>
+      <button class="chat-close" id="chatClose">×</button>
+    </div>
+    <div class="chat-body" id="chatBody" data-lenis-prevent>
+      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please choose a topic below.</div>
+      <div class="chat-options" id="chatOptions">
+        <button class="chat-opt-btn" data-q="emergency">What are the emergency numbers?</button>
+        <button class="chat-opt-btn" data-q="bplo">How to apply for a Business Permit?</button>
+        <button class="chat-opt-btn" data-q="taxes">How do I pay taxes online?</button>
+        <button class="chat-opt-btn" data-q="pwd">How to apply for PWD ID?</button>
+        <button class="chat-opt-btn" data-q="location">Where is the Municipal Hall?</button>
+        <button class="chat-opt-btn" data-q="mayor">Who is the Mayor?</button>
+        <button class="chat-opt-btn" data-q="contact">How can I contact the office?</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+    <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Open Chat">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+  </div>
+
   <div class="text-modal" id="contactModal">
     <div class="modal-overlay" id="contactModalOverlay"></div>
     <div class="info-modal-content contact-modal-content">
       <button class="modal-close" id="contactModalClose">×</button>
-      
       <div class="info-modal-header text-center" style="border-bottom: none; padding-bottom: 0; padding-top: 2.5rem;">
         <h2 style="font-size: 2.2rem; font-weight: 700; color: #000;">CONTACT US</h2>
       </div>
-      
-      <div class="info-modal-body" style="padding-top: 1rem;">
-        
+      <div class="info-modal-body" style="padding-top: 1rem;" data-lenis-prevent>
         <div class="contact-hotlines">
           <div class="c-card">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: var(--text-blue); margin-bottom: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -593,45 +634,22 @@
             <p>Public Information Office</p>
           </div>
         </div>
-
         <div class="contact-map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3552084666324!2d121.1121045152865!3d14.58212158981504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c79cb14c407d%3A0x6b64731b8163f4ce!2sCainta%20Municipal%20Hall!5e0!3m2!1sen!2sph!4v1698765432100!5m2!1sen!2sph" width="100%" height="250" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
         <div class="contact-form-section">
           <p class="form-title">You can also contact us by using this form:</p>
-          
           <form class="c-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); document.getElementById('contactModalClose').click();">
             <div class="form-row">
-              <div class="form-group">
-                <label>First Name *</label>
-                <input type="text" placeholder="e.g., Juan" required>
-              </div>
-              <div class="form-group">
-                <label>Last Name *</label>
-                <input type="text" placeholder="e.g., Dela Cruz" required>
-              </div>
+              <div class="form-group"><label>First Name *</label><input type="text" placeholder="e.g., Juan" required></div>
+              <div class="form-group"><label>Last Name *</label><input type="text" placeholder="e.g., Dela Cruz" required></div>
             </div>
-            
-            <div class="form-group">
-              <label>Email *</label>
-              <input type="email" placeholder="e.g., juandelacruz@gmail.com" required>
-            </div>
-            
-            <div class="form-group">
-              <label>Subject *</label>
-              <input type="text" placeholder="e.g., Assistance" required>
-            </div>
-            
-            <div class="form-group">
-              <label>Write a message</label>
-              <textarea placeholder=""></textarea>
-            </div>
-            
+            <div class="form-group"><label>Email *</label><input type="email" placeholder="e.g., juandelacruz@gmail.com" required></div>
+            <div class="form-group"><label>Subject *</label><input type="text" placeholder="e.g., Assistance" required></div>
+            <div class="form-group"><label>Write a message</label><textarea placeholder=""></textarea></div>
             <button type="submit" class="action-btn form-submit-btn">Submit</button>
           </form>
         </div>
-
       </div>
     </div>
   </div>

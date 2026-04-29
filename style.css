@@ -510,6 +510,25 @@ body.services-page .search-toggle-btn { color: var(--text-main) !important; filt
 .dept-contact p { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-muted); margin: 0; }
 .dept-contact svg { width: 18px; height: 18px; color: var(--text-blue); flex-shrink: 0; }
 
+/* ===== SMART SEARCH CATEGORY BADGES ===== */
+.search-result-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.3rem; }
+.search-badge { font-family: var(--font-body); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 50px; letter-spacing: 0.05em; margin-left: 1rem; flex-shrink: 0; }
+.search-badge.service { background: #DBEAFE; color: #1E3A8A; }
+.search-badge.department { background: #FEF3C7; color: #92400E; }
+.search-badge.place { background: #D1FAE5; color: #065F46; }
+.search-badge.history { background: #E0E7FF; color: #3730A3; }
+.search-badge.official { background: #FCE7F3; color: #6B21A8; }
+.search-badge.contact { background: #FEE2E2; color: #991B1B; }
+.search-badge.facility { background: #CCFBF1; color: #064E3B; }
+.search-badge.education { background: #E0E7FF; color: #3730A3; }
+.search-badge.government { background: #EDE9FE; color: #312E81; }
+
+/* ===== OFFSET FOR SMOOTH SCROLL JUMPING ===== */
+/* This ensures the fixed header doesn't overlap elements when the search engine jumps to them */
+html { scroll-padding-top: 140px; }
+.dept-card { scroll-margin-top: 140px; }
+.service-content { scroll-margin-top: 140px; }
+.about-section { scroll-margin-top: 120px; }
 
 /* ── 📱 Responsive Architecture (All Mobile & Tablet Devices) ── */
 

@@ -471,7 +471,8 @@ window.addEventListener("load", () => {
   const links = document.querySelectorAll('.dock-link');
   const contents = document.querySelectorAll('.service-content');
 
-  function switchTab(targetId) {
+  // We attach this globally so the Search Engine can utilize it to open tabs!
+  window.switchTab = function(targetId) {
     links.forEach(l => l.classList.remove('active'));
     contents.forEach(c => c.classList.remove('active'));
     const activeLink = document.querySelector(`.dock-link[data-target="${targetId}"]`);
@@ -480,20 +481,20 @@ window.addEventListener("load", () => {
       activeLink.classList.add('active');
       activeContent.classList.add('active');
     }
-  }
+  };
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const target = link.dataset.target;
-      switchTab(target);
+      window.switchTab(target);
       window.location.hash = target;
     });
   });
 
   window.addEventListener('load', () => {
     const hash = window.location.hash.substring(1);
-    if (hash) switchTab(hash);
+    if (hash) window.switchTab(hash);
   });
 })();
 
@@ -549,6 +550,7 @@ window.addEventListener("load", () => {
 // 12. TEXT INFO MODALS (SERVICES & NEWS "READ MORE")
 // ==========================================================================
 (function initTextInfoModals() {
+  
   const infoData = {
     idApp: {
       title: "ID Application Requirements",
@@ -629,37 +631,25 @@ window.addEventListener("load", () => {
       title: "CAINTA OBSERVES SEMANA SANTA 2024 WITH SENAKULO AND PARADA",
       date: "April 2, 2024",
       img: "pics/main_pg_pics/senakula.avif",
-      content: `
-        <p>True to its century’s tradition of Lenten observation, Cainta began the month of March with its own staging of the Senakulo. The passion play, a cornerstone of Cainta's cultural heritage, was performed by various local groups to commemorate the life, suffering, and resurrection of Jesus Christ.</p>
-        <p>The observation culminated in the grand Parada ng Panata, where devotees walked the streets in solemn procession, showcasing the deep faith and unwavering devotion of the community. Local officials expressed their gratitude to all participants for keeping the century-old tradition alive and vibrant.</p>
-      `
+      content: `<p>True to its century’s tradition of Lenten observation, Cainta began the month of March with its own staging of the Senakulo. The passion play, a cornerstone of Cainta's cultural heritage, was performed by various local groups to commemorate the life, suffering, and resurrection of Jesus Christ.</p><p>The observation culminated in the grand Parada ng Panata, where devotees walked the streets in solemn procession, showcasing the deep faith and unwavering devotion of the community.</p>`
     },
     news2: {
-      title: "CAINTA NAMED THE MOST COMPETITIVE MUNICIPALITY IN THE PHILIPPINES",
+      title: "CAINTA NAMED THE MOST COMPETITIVE MUNICIPALITY",
       date: "September 28, 2023",
       img: "pics/main_pg_pics/caintaawards.avif",
-      content: `
-        <p>The Municipality of Cainta once again was named as the Most Competitive Municipality in the Philippines during the Cities and Municipalities Competitiveness Summit (CMCS) for the year 2023.</p>
-        <p>Cainta secured the top spot overall among 1st to 2nd Class Municipalities, demonstrating excellence across multiple pillars including Economic Dynamism, Government Efficiency, Infrastructure, and Resiliency. This achievement is a testament to the local government's continuous efforts to provide outstanding public service and foster a thriving environment for businesses and residents alike.</p>
-      `
+      content: `<p>The Municipality of Cainta once again was named as the Most Competitive Municipality in the Philippines during the Cities and Municipalities Competitiveness Summit (CMCS) for the year 2023.</p><p>Cainta secured the top spot overall among 1st to 2nd Class Municipalities, demonstrating excellence across multiple pillars including Economic Dynamism, Government Efficiency, Infrastructure, and Resiliency.</p>`
     },
     news3: {
       title: "ONE CAINTA COLLEGE RESUMES COMMENCEMENT EXERCISES",
       date: "September 1, 2023",
       img: "pics/main_pg_pics/collegepic.avif",
-      content: `
-        <p>Last August 8, 2023, the One Cainta College resumed its graduation rites for its 317 students, marking the 3rd face-to-face graduation ceremony since the pandemic restrictions were lifted.</p>
-        <p>The commencement exercises celebrated the resilience and hard work of the graduating class, who completed their degrees in various fields such as Information Systems, Entrepreneurship, and Technical Vocational Teacher Education. Local government leaders and college administrators congratulated the students, wishing them success as they join the professional workforce.</p>
-      `
+      content: `<p>Last August 8, 2023, the One Cainta College resumed its graduation rites for its 317 students, marking the 3rd face-to-face graduation ceremony since the pandemic restrictions were lifted.</p><p>The commencement exercises celebrated the resilience and hard work of the graduating class, who completed their degrees in various fields such as Information Systems, Entrepreneurship, and Technical Vocational Teacher Education.</p>`
     },
     news4: {
       title: "ONE CAINTA COMMUNITY SHELTER FINALLY OPENS",
       date: "May 2, 2023",
       img: "pics/main_pg_pics/shelterpic.avif",
-      content: `
-        <p>A first of its kind and fully-run by the local government, Cainta finally opened its Shelter for the Homeless along the Westbank floodway.</p>
-        <p>The community shelter is designed to provide a safe, clean, and dignified temporary residence for marginalized individuals and families. The facility offers essential amenities, feeding programs, and social support services to help residents get back on their feet. This initiative underscores the municipality's commitment to inclusive growth and compassionate governance.</p>
-      `
+      content: `<p>A first of its kind and fully-run by the local government, Cainta finally opened its Shelter for the Homeless along the Westbank floodway.</p><p>The community shelter is designed to provide a safe, clean, and dignified temporary residence for marginalized individuals and families. The facility offers essential amenities, feeding programs, and social support services to help residents get back on their feet.</p>`
     }
   };
 
@@ -671,12 +661,14 @@ window.addEventListener("load", () => {
     document.querySelectorAll('.info-trigger').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        
         const menuToggle = document.getElementById('menuToggle');
         const dropdownMenu = document.getElementById('dropdownMenu');
         if (menuToggle && dropdownMenu) {
             menuToggle.classList.remove('active');
             dropdownMenu.classList.remove('active');
         }
+
         const data = infoData[btn.getAttribute('data-target-info')];
         if (data) {
           infoModalTitle.textContent = data.title;
@@ -786,22 +778,63 @@ window.addEventListener("load", () => {
 })();
 
 // ==========================================================================
-// 16. SMART SEARCH ENGINE
+// 16. SMART SEARCH ENGINE (CATEGORIZED & ANCHORED)
 // ==========================================================================
 (function initSmartSearch() {
-  // Database of searchable pages and keywords
+  
+  // Categorized database covering the entire municipality
   const searchDB = [
-    { title: "COVID-19 Vaccination & Testing", url: "services.html#covid", keywords: "covid 19 vaccine test swab health virus" },
-    { title: "PWD ID Application", url: "services.html#id-app", keywords: "pwd id application requirements persons with disability" },
-    { title: "Senior Citizen ID", url: "services.html#id-app", keywords: "senior citizen id application requirements old" },
-    { title: "Solo Parent ID", url: "services.html#id-app", keywords: "solo parent id application requirements mother father" },
-    { title: "Municipal Hospital", url: "services.html#hospital", keywords: "hospital medical doctor sick emergency" },
-    { title: "One Cainta College", url: "services.html#college", keywords: "college school education student enroll" },
-    { title: "History of Cainta", url: "about_cainta.html#history", keywords: "history sepoy background founded old" },
-    { title: "Mayor J. Keith P. Nieto", url: "officials.html", keywords: "mayor kit nieto head executive" },
-    { title: "Emergency Hotlines", url: "index.html#hotlines", keywords: "hotline emergency rescue police fire hospital" },
-    { title: "E-Payment & Online Services", url: "services.html#online", keywords: "pay online taxes rpt business permit" },
-    { title: "Municipal Departments & Directory", url: "departments.html", keywords: "departments offices directory mayor vice health engineering bplo assessor" }
+    { title: "COVID-19 Vaccination & Testing", category: "Service", url: "services.html#covid", keywords: "covid 19 vaccine test swab health virus" },
+    { title: "PWD ID Application Requirements", category: "Service", url: "services.html#id-app", keywords: "pwd id application requirements persons with disability" },
+    { title: "Senior Citizen ID Application", category: "Service", url: "services.html#id-app", keywords: "senior citizen id application requirements old" },
+    { title: "Solo Parent ID Application", category: "Service", url: "services.html#id-app", keywords: "solo parent id application requirements mother father" },
+    { title: "Municipal Hospital & Medical Arts", category: "Facility", url: "services.html#hospital", keywords: "hospital medical doctor sick emergency" },
+    { title: "One Cainta College Portal", category: "Education", url: "services.html#college", keywords: "college school education student enroll" },
+    { title: "History of Cainta", category: "History", url: "about_cainta.html#history", keywords: "history sepoy background founded old" },
+    { title: "Tourist Spots & Landmarks", category: "Place", url: "about_cainta.html#tourist-spots", keywords: "tourist travel spot park arena mall rotc museo" },
+    { title: "Barangay Directory", category: "Government", url: "about_cainta.html#barangays", keywords: "barangay brgy san andres domingo isidro juan nino roque rosa" },
+    { title: "Mayor Atty. J. Keith P. Nieto", category: "Official", url: "officials.html", keywords: "mayor kit nieto head executive" },
+    { title: "Vice Mayor Hon. Ace Bernardo Servillon", category: "Official", url: "officials.html", keywords: "vice mayor ace servillon" },
+    { title: "Emergency Hotlines", category: "Contact", url: "index.html#hotlines", keywords: "hotline emergency rescue police fire hospital" },
+    { title: "E-Payment & Online Services", category: "Service", url: "services.html#online", keywords: "pay online taxes rpt business permit" },
+    
+    // Core Departments (Mapped exactly to department.html IDs)
+    { title: "Municipal Treasury Office", category: "Department", url: "departments.html#dept-treasury", keywords: "departments offices directory treasury tax pay collection finance" },
+    { title: "Business Permits & Licensing (BPLO)", category: "Department", url: "departments.html#dept-bplo", keywords: "departments offices directory bplo business permit license renew commercial" },
+    { title: "Municipal Accounting Office", category: "Department", url: "departments.html#dept-accounting", keywords: "departments offices directory accounting financial audit" },
+    { title: "Municipal Budget Office", category: "Department", url: "departments.html#dept-budget", keywords: "departments offices directory budget fund allocation" },
+    { title: "Assessor's Office", category: "Department", url: "departments.html#dept-assessor", keywords: "departments offices directory assessor property tax land appraisal" },
+    { title: "Municipal Planning & Dev't (MPDC)", category: "Department", url: "departments.html#dept-mpdc", keywords: "departments offices directory mpdc planning zoning development" },
+    { title: "Engineering Office", category: "Department", url: "departments.html#dept-engineering", keywords: "departments offices directory engineering public works building permit infrastructure" },
+    { title: "Management Information System (MIS)", category: "Department", url: "departments.html#dept-mis", keywords: "departments offices directory mis it computers tech" },
+    { title: "General Services Office (GSO)", category: "Department", url: "departments.html#dept-gso", keywords: "departments offices directory gso general services supplies" },
+    { title: "Waste Management Office", category: "Department", url: "departments.html#dept-waste", keywords: "departments offices directory waste garbage trash collection" },
+    { title: "Environment & Natural Resources (MENRO)", category: "Department", url: "departments.html#dept-menro", keywords: "departments offices directory menro environment nature trees" },
+    { title: "Muslim Affairs Office", category: "Department", url: "departments.html#dept-muslim", keywords: "departments offices directory muslim islam affairs" },
+    { title: "Municipal Health Office", category: "Department", url: "departments.html#dept-health", keywords: "departments offices directory health clinic medicine sickness" },
+    { title: "Malasakit Center", category: "Department", url: "departments.html#dept-malasakit", keywords: "departments offices directory malasakit center financial aid medical" },
+    { title: "Social Welfare (MSWD)", category: "Department", url: "departments.html#dept-mswd", keywords: "departments offices directory mswd social welfare dswd relief" },
+    { title: "Mayor's Action Team (MAT)", category: "Department", url: "departments.html#dept-mat", keywords: "departments offices directory mat mayor action team" },
+    { title: "Office of the Senior Citizens", category: "Department", url: "departments.html#dept-osca", keywords: "departments offices directory osca senior citizen elderly" },
+    { title: "Local Civil Registry (LCRO)", category: "Department", url: "departments.html#dept-lcro", keywords: "departments offices directory lcr birth certificate death marriage registry" },
+    { title: "Human Resources (HRMO)", category: "Department", url: "departments.html#dept-hrmo", keywords: "departments offices directory hrmo human resources jobs employment" },
+    { title: "Public Information Office (PIO)", category: "Department", url: "departments.html#dept-pio", keywords: "departments offices directory pio news media information" },
+    { title: "Legal Office", category: "Department", url: "departments.html#dept-legal", keywords: "departments offices directory legal lawyer attorney court" },
+    { title: "Municipal Tourism & Arts", category: "Department", url: "departments.html#dept-tourism", keywords: "departments offices directory tourism arts culture visitor travel" },
+    { title: "Municipal Public Safety", category: "Department", url: "departments.html#dept-safety", keywords: "departments offices directory safety security police guard" },
+    { title: "Tricycle Regulatory (CTRU)", category: "Department", url: "departments.html#dept-ctru", keywords: "departments offices directory ctru tricycle toda transport" },
+    { title: "Municipal Economic Enterprise", category: "Department", url: "departments.html#dept-meeo", keywords: "departments offices directory meeo economic enterprise market" },
+    { title: "Cooperative & Development", category: "Department", url: "departments.html#dept-coop", keywords: "departments offices directory cooperative mcdo business loan" },
+    { title: "Agriculture Office", category: "Department", url: "departments.html#dept-agriculture", keywords: "departments offices directory agriculture farm crops plants" },
+    { title: "Public Employment (PESO)", category: "Department", url: "departments.html#dept-peso", keywords: "departments offices directory peso job hiring work employment" },
+    { title: "Gender & Dev't Council", category: "Department", url: "departments.html#dept-gad", keywords: "departments offices directory gad gender women" },
+    { title: "Veterinary Office", category: "Department", url: "departments.html#dept-vet", keywords: "departments offices directory vet veterinary animal dog cat rabies" },
+    { title: "Disaster Risk Reduction (MDRRMO)", category: "Department", url: "departments.html#dept-mdrrmo", keywords: "departments offices directory mdrrmo rescue emergency typhoon flood" },
+    { title: "Sports Development", category: "Department", url: "departments.html#dept-sports", keywords: "departments offices directory sports basketball arena game" },
+    { title: "Youth Development", category: "Department", url: "departments.html#dept-youth", keywords: "departments offices directory cydo youth student teen sk" },
+    { title: "Anti-Drug Abuse Council", category: "Department", url: "departments.html#dept-cadac", keywords: "departments offices directory cadac drugs abuse rehabilitation" },
+    { title: "Persons with Disability", category: "Department", url: "departments.html#dept-pdao", keywords: "departments offices directory pdao pwd disability handicap" },
+    { title: "Municipal Info Desk", category: "Department", url: "departments.html#dept-info", keywords: "departments offices directory info desk inquiry ask" }
   ];
 
   const searchToggleBtn = document.getElementById('searchToggleBtn');
@@ -830,10 +863,9 @@ window.addEventListener("load", () => {
       
       if(query.length === 0) return;
 
-      // Filter logic based on title or keywords
       const filtered = searchDB.filter(item => 
         item.title.toLowerCase().includes(query) || 
-        item.keywords.includes(query)
+        (item.keywords && item.keywords.includes(query))
       );
 
       if(filtered.length === 0) {
@@ -841,17 +873,44 @@ window.addEventListener("load", () => {
         return;
       }
 
-      // Populate results
       filtered.forEach(result => {
         const link = document.createElement('a');
         link.href = result.url;
         link.className = 'search-result-item';
-        link.innerHTML = `<h4>${result.title}</h4><p>Click to view page →</p>`;
         
-        // Remove modal if they click a link so the page can scroll normally
-        link.addEventListener('click', () => {
-            searchModal.classList.remove('active');
-            if (typeof lenis !== 'undefined') lenis.start(); 
+        // Inject Custom Category Badges
+        link.innerHTML = `
+          <div class="search-result-header">
+            <h4>${result.title}</h4>
+            <span class="search-badge ${result.category.toLowerCase()}">${result.category}</span>
+          </div>
+          <p>Click to view page & details →</p>
+        `;
+        
+        // Link Click Handler (Enables smooth jumping on the same page!)
+        link.addEventListener('click', (e) => {
+            const urlObj = new URL(link.href, window.location.origin);
+            
+            // If the anchor is on the exact same page we are already on...
+            if (urlObj.pathname === window.location.pathname && urlObj.hash) {
+                e.preventDefault();
+                searchModal.classList.remove('active');
+                if (typeof lenis !== 'undefined') {
+                    lenis.start();
+                    
+                    // If we are on the services page, automatically click the tab!
+                    if (window.location.pathname.includes('services.html') && typeof window.switchTab === 'function') {
+                        window.switchTab(urlObj.hash.substring(1));
+                    }
+                    
+                    // Smooth scroll down to the exact section (-140px offset for the fixed header)
+                    lenis.scrollTo(urlObj.hash, { offset: -140 });
+                }
+            } else {
+               // Let normal browser navigation handle jumping to a different page
+               searchModal.classList.remove('active');
+               if (typeof lenis !== 'undefined') lenis.start(); 
+            }
         });
 
         searchResults.appendChild(link);
@@ -875,7 +934,10 @@ window.addEventListener("load", () => {
     pwd: "To apply for a PWD ID, you need: <br>1. Valid Gov ID (Cainta address)<br>2. Medical Certificate<br>3. Two 2x2 photos<br>4. Application Form.<br><a href='services.html#id-app'>View full details here.</a>",
     location: "The Municipal Hall is located at A. Bonifacio Ave, Cainta, Rizal. You can click 'Explore Municipal Hall' on our home page to see the map!",
     mayor: "The Mayor of Cainta is Atty. J. Keith P. Nieto, JD. He has led the municipality to become the most competitive in the Philippines. <a href='officials.html'>Read more here.</a>",
-    contact: "You can click 'Contact Us' in the menu to send a message, or call our hotlines: <br>RESCUE: 8535-0131<br>PIO: 8696-2617"
+    contact: "You can click 'Contact Us' in the menu to send a message, or call our hotlines: <br>RESCUE: 8535-0131<br>PIO: 8696-2617",
+    emergency: "For immediate emergencies, please call RESCUE 131 at 8535-0131. For Fire, call 8696-2616. <br><a href='index.html#hotlines'>View all emergency hotlines.</a>",
+    bplo: "To apply for or renew a Business Permit, you can visit the BPLO office at the Municipal Hall or use our <a href='services.html#online'>Online Business Permit Portal.</a>",
+    taxes: "You can conveniently pay your Real Property Tax (RPT) online through our E-Payment system! <br><a href='services.html#online'>Click here to access the payment portal.</a>"
   };
 
   if(chatToggleBtn && chatWidget) {
@@ -892,23 +954,19 @@ window.addEventListener("load", () => {
         const questionText = btn.textContent;
         const answerHtml = chatDB[btn.getAttribute('data-q')];
         
-        // Hide options temporarily
         chatOptionsContainer.style.display = 'none';
 
-        // Inject User Bubble
         const userDiv = document.createElement('div');
         userDiv.className = 'chat-msg user';
         userDiv.textContent = questionText;
         chatBody.appendChild(userDiv);
 
-        // Simulate a small typing delay for a natural feel
         setTimeout(() => {
           const botDiv = document.createElement('div');
           botDiv.className = 'chat-msg bot';
           botDiv.innerHTML = answerHtml;
           chatBody.appendChild(botDiv);
           
-          // Bring options back to the bottom
           setTimeout(() => {
             chatOptionsContainer.style.display = 'flex';
             chatBody.appendChild(chatOptionsContainer);
@@ -930,7 +988,6 @@ window.addEventListener("load", () => {
   
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
-      // Show button after scrolling down 400px
       if (window.scrollY > 400) {
         backToTopBtn.classList.add('visible');
       } else {
