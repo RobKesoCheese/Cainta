@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Municipal Departments | Municipality of Cainta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loading-curtain" id="loadingCurtain">
+    <div class="loader-text">CAINTA</div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
+    <div class="header-center"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></div>
+    <div class="header-right">
+      
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="officials.html">Officials</a>
+        <a href="departments.html" style="color: var(--text-blue);">Departments</a>
+        <a href="about_cainta.html">About Cainta</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </button>
+      
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <ul class="hList">
+          <li><a href="index.html" class="menu"><h2 class="menu-title">Home</h2></a></li>
+          <li><a href="services.html" class="menu"><h2 class="menu-title">Services</h2></a></li>
+          <li><a href="officials.html" class="menu"><h2 class="menu-title">Officials</h2></a></li>
+          <li><a href="departments.html" class="menu"><h2 class="menu-title">Departments</h2></a></li>
+          <li><a href="about_cainta.html" class="menu"><h2 class="menu-title">About Cainta</h2></a></li>
+          <li><a href="#contact" class="menu"><h2 class="menu-title">Contact Us</h2></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="hero about-hero" id="home">
+    <div class="hero-background" style="background-image: url('pics/main_pg_pics/main_hall_pic.jpg'); background-position: center center;"></div> 
+    <div class="hero-overlay" style="background: rgba(0,0,0,0.7);"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-line"><span class="title-text">MUNICIPAL</span></span><br>
+        <span class="title-line"><span class="title-text">DEPARTMENTS</span></span>
+      </h1>
+    </div>
+  </section>
+
+  <div class="content-wrapper">
+    
+    <section class="about-section brgy-pin-section" id="directory">
+      <div class="brgy-scroll-wrapper">
+        <div class="brgy-intro-lock">
+          <h2 class="about-section-title">DIRECTORY</h2>
+          <p>Explore the primary executive offices dedicated to serving the citizens of Cainta with transparency, efficiency, and continuous progress. <br><br><strong>Scroll to explore →</strong></p>
+        </div>
+        
+        <div class="brgy-horizontal-track">
+          
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Seal Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" class="brgy-seal-small" alt="Seal">
+                <h3>Office of the Mayor</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Department Head</span><span>Atty. J. Keith P. Nieto, JD</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8696-2613</span></div>
+                <div class="brgy-data-item"><span>Email</span><span>mayor@cainta.gov.ph</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Seal Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" class="brgy-seal-small" alt="Seal">
+                <h3>Office of the Vice Mayor</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Department Head</span><span>Hon. Ace Bernardo Servillon</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8696-2581</span></div>
+                <div class="brgy-data-item"><span>Email</span><span>ovm@cainta.gov.ph</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Seal Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" class="brgy-seal-small" alt="Seal">
+                <h3>Office of the Administrator</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Department Head</span><span>Municipal Administrator</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8696-2612</span></div>
+                <div class="brgy-data-item"><span>Email</span><span>admin@cainta.gov.ph</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brgy-panel">
+            <img class="brgy-bg-seal" src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Seal Background">
+            <div class="brgy-panel-content">
+              <div class="brgy-panel-header">
+                <img src="dpt_ofc/img.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" class="brgy-seal-small" alt="Seal">
+                <h3>Sangguniang Bayan</h3>
+              </div>
+              <div class="brgy-data-grid">
+                <div class="brgy-data-item"><span>Department Head</span><span>Municipal Councilors</span></div>
+                <div class="brgy-data-item"><span>Contact No.</span><span>8696-2582</span></div>
+                <div class="brgy-data-item"><span>Email</span><span>sb@cainta.gov.ph</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="departments-grid-section">
+      <h2 class="dept-section-title slide-up">DEPARTMENTS & OFFICES</h2>
+      
+      <div class="dept-grid">
+        
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img2.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Treasury"></div>
+          <h3 class="dept-name">Municipal Treasury Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> treasury@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8655-2044</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img3.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="BPLO"></div>
+          <h3 class="dept-name">Business Permits & Licensing Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> bplo@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2572</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img4.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Accounting"></div>
+          <h3 class="dept-name">Municipal Accounting Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> accounting@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2565</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img5.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Budget"></div>
+          <h3 class="dept-name">Municipal Budget Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> budget@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2615</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img6.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Assessors"></div>
+          <h3 class="dept-name">Assessors Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> assessor@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2599</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img7.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MPDC"></div>
+          <h3 class="dept-name">Municipal Planning & Dev't (MPDC)</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> mpdc@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2602</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img8.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Engineering"></div>
+          <h3 class="dept-name">Engineering Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> engineering@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8532-1296</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img9.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MIS"></div>
+          <h3 class="dept-name">Management Information System</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> mis@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2608</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img10.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="GSO"></div>
+          <h3 class="dept-name">General Services Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> gso@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8654-7662</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img11.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Waste Management"></div>
+          <h3 class="dept-name">Waste Management Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8654-6474</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img12.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MENRO"></div>
+          <h3 class="dept-name">Municipal Environment (MENRO)</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> menro@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2571</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img13.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Muslim Affairs"></div>
+          <h3 class="dept-name">Muslim Affairs Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 0947-2694218</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img14.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Health Office"></div>
+          <h3 class="dept-name">Health Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> health@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8708-2872</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img15.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Malasakit Center"></div>
+          <h3 class="dept-name">Malasakit Center</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> malasakit@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2604 to 065</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img16.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Municipal Hospital"></div>
+          <h3 class="dept-name">Cainta Municipal Hospital</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> cmh@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2605</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img17.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Medical Arts"></div>
+          <h3 class="dept-name">One Cainta Medical Arts</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> cmh@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8664-7641</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img18.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MSWD"></div>
+          <h3 class="dept-name">MSWD Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> mswd@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2569 to 70</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img19.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MAT"></div>
+          <h3 class="dept-name">Mayor's Action Team</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8534-7145</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img20.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="OSCA"></div>
+          <h3 class="dept-name">Office of the Senior Citizens</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> osca@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2576</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img21.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="LCRO"></div>
+          <h3 class="dept-name">Local Civil Registry</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> lcr@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2597</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img22.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="HRMO"></div>
+          <h3 class="dept-name">Human Resources</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> hrmo@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2577</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img23.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="PIO"></div>
+          <h3 class="dept-name">Public Information Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> pio@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2617</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img24.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Legal"></div>
+          <h3 class="dept-name">Legal Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> legal@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8655-4091</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img25.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Tourism"></div>
+          <h3 class="dept-name">Municipal Tourism & Arts</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> tourism@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2584</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img26.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Public Safety"></div>
+          <h3 class="dept-name">Municipal Public Safety</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2600</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img27.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="CTRU"></div>
+          <h3 class="dept-name">Tricycle Regulatory (CTRU)</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8281-4276</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img28.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MEEO"></div>
+          <h3 class="dept-name">Municipal Economic Enterprise</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8655-2031</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img29.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MCDO"></div>
+          <h3 class="dept-name">Cooperative & Development</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 0991-3862226</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img30.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Agriculture"></div>
+          <h3 class="dept-name">Agriculture Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2583</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img31.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="PESO"></div>
+          <h3 class="dept-name">Public Employment (PESO)</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> peso@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2573</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img32.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="GAD"></div>
+          <h3 class="dept-name">Gender & Dev't Council</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8650-9526</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img33.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Veterinary"></div>
+          <h3 class="dept-name">Veterinary Office</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> veterinary@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-2598</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img34.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MDRRMO"></div>
+          <h3 class="dept-name">Disaster Risk Reduction</h3>
+          <p class="dept-head">MDRRMO Officer</p>
+          <p class="dept-role">Department Head</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> cdrrmo@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8535-0131</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img35.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Sports"></div>
+          <h3 class="dept-name">Sports Development</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> sports@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8942-7468</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img36.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="CYDO"></div>
+          <h3 class="dept-name">Youth Development</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> cydo@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8656-6219</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img37.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="MADAC"></div>
+          <h3 class="dept-name">Anti-Drug Abuse Council</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> cadac@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8332-7647</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img38.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="PDAO"></div>
+          <h3 class="dept-name">Persons with Disability</h3>
+          <p class="dept-head">PDAO Officer</p>
+          <p class="dept-role">Department Head</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> pdao@cainta.gov.ph</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8861-5546</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img39.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="One Cainta College"></div>
+          <h3 class="dept-name">One Cainta College</h3>
+          <p class="dept-head">College Administrator</p>
+          <p class="dept-role">Department Head</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8879-0410</p>
+          </div>
+        </div>
+
+        <div class="dept-card slide-up">
+          <div class="dept-logo-wrapper"><img src="dpt_ofc/img40.avif" onerror="this.src='pics/main_pg_pics/cainta_logo.png'" alt="Info Desk"></div>
+          <h3 class="dept-name">Municipal Info Desk</h3>
+          <p class="dept-head">Department Head</p>
+          <p class="dept-role">Cainta Municipal Office</p>
+          <div class="dept-contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 8696-1425</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-top">
+        <div class="footer-brand">
+           <img src="pics/main_pg_pics/cainta_logo.png" alt="Cainta Logo" class="footer-logo">
+           <p class="footer-desc">Building a progressive, inclusive, and culturally rich municipality with transparent governance and user-friendly digital solutions.</p>
+           <div class="social-links">
+             <a href="https://www.facebook.com/onecainta.onecainta" target="_blank" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+             </a>
+           </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-col">
+            <h4>Navigation</h4>
+            <a href="index.html">Home</a>
+            <a href="about_cainta.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="link-col">
+            <h4>Resources</h4>
+            <a href="disclosure.html">Full Disclosure</a>
+            <a href="services.html#res-ord">Local Ordinances</a>
+            <a href="services.html#res-ord">Resolutions</a>
+            <a href="services.html#online">E-Payment</a>
+          </div>
+          <div class="link-col">
+            <h4>Support</h4>
+            <a href="index.html#hotlines">Hotlines</a>
+            <a href="departments.html">Departments</a>
+            <a href="about_cainta.html#barangays">Barangays</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="link-col">
+            <h4>Government</h4>
+            <a href="officials.html">Mayor's Office</a>
+            <a href="officials.html">Officials</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Municipality of Cainta. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+  </div> 
+
+  <div class="search-modal" id="searchModal">
+    <button class="modal-close" id="closeSearchModal">×</button>
+    <div class="search-container" data-lenis-prevent>
+      <h2 class="search-title">Search Cainta Portal</h2>
+      <div class="search-input-wrapper">
+        <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Search services, officials, history..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <h4>Cainta Assistant</h4>
+      <button class="chat-close" id="chatClose">×</button>
+    </div>
+    <div class="chat-body" id="chatBody" data-lenis-prevent>
+      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please choose a topic below.</div>
+      <div class="chat-options" id="chatOptions">
+        <button class="chat-opt-btn" data-q="pwd">How to apply for PWD ID?</button>
+        <button class="chat-opt-btn" data-q="location">Where is the Municipal Hall?</button>
+        <button class="chat-opt-btn" data-q="mayor">Who is the Mayor?</button>
+        <button class="chat-opt-btn" data-q="contact">How can I contact the office?</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+    <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Open Chat">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+  </div>
+
+  <div class="text-modal" id="contactModal">
+    <div class="modal-overlay" id="contactModalOverlay"></div>
+    <div class="info-modal-content contact-modal-content">
+      <button class="modal-close" id="contactModalClose">×</button>
+      <div class="info-modal-header text-center" style="border-bottom: none; padding-bottom: 0; padding-top: 2.5rem;">
+        <h2 style="font-size: 2.2rem; font-weight: 700; color: #000;">CONTACT US</h2>
+      </div>
+      <div class="info-modal-body" style="padding-top: 1rem;" data-lenis-prevent>
+        <div class="contact-hotlines">
+          <div class="c-card">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: var(--text-blue); margin-bottom: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <h4>8535-0131</h4>
+            <p>RESCUE 131 (24/7)</p>
+          </div>
+          <div class="c-card">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: var(--text-blue); margin-bottom: 0.5rem;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <h4>8696-2617</h4>
+            <p>Public Information Office</p>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3552084666324!2d121.1121045152865!3d14.58212158981504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c79cb14c407d%3A0x6b64731b8163f4ce!2sCainta%20Municipal%20Hall!5e0!3m2!1sen!2sph!4v1698765432100!5m2!1sen!2sph" width="100%" height="250" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form-section">
+          <p class="form-title">You can also contact us by using this form:</p>
+          <form class="c-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); document.getElementById('contactModalClose').click();">
+            <div class="form-row">
+              <div class="form-group"><label>First Name *</label><input type="text" placeholder="e.g., Juan" required></div>
+              <div class="form-group"><label>Last Name *</label><input type="text" placeholder="e.g., Dela Cruz" required></div>
+            </div>
+            <div class="form-group"><label>Email *</label><input type="email" placeholder="e.g., juandelacruz@gmail.com" required></div>
+            <div class="form-group"><label>Subject *</label><input type="text" placeholder="e.g., Assistance" required></div>
+            <div class="form-group"><label>Write a message</label><textarea placeholder=""></textarea></div>
+            <button type="submit" class="action-btn form-submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
