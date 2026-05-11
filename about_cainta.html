@@ -30,13 +30,13 @@
     
     <div class="header-right">
       <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="officials.html">Officials</a>
-        <a href="departments.html" style="color: var(--text-blue);">Departments</a>
-        <a href="about_cainta.html">About Cainta</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
+                <a href="index.html">HOME</a>
+                <a href="services.html">SERVICES</a>
+                <a href="officials.html">OFFICIALS</a>
+                <a href="departments.html">DEPARTMENTS</a>
+                <a href="about_cainta.html" class="active-nav">ABOUT CAINTA</a>
+                <a href="index.html#contact">CONTACT US</a>
+            </nav>
 
       <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Search">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -397,7 +397,7 @@
           
           <div class="brgy-horizontal-track">
             
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-san-andres">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ANDRES.avif" alt="San Andres Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -413,7 +413,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-sto-domingo">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STO. DOMINGO.avif" alt="Sto Domingo Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -429,7 +429,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-san-isidro">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ISIDRO.avif" alt="San Isidro Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -452,7 +452,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-san-juan">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN JUAN.avif" alt="San Juan Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -468,7 +468,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-sto-nino">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STO. NIÑO.avif" alt="Sto Niño Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -484,7 +484,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-san-roque">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/SAN ROQUE.avif" alt="San Roque Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -500,7 +500,7 @@
               </div>
             </div>
 
-            <div class="brgy-panel">
+            <div class="brgy-panel" id="brgy-sta-rosa">
               <img class="brgy-bg-seal" src="about_cainta_pics/brgy/STA. ROSA.avif" alt="Sta Rosa Background">
               <div class="brgy-panel-content">
                 <div class="brgy-panel-header">
@@ -549,25 +549,25 @@
             <div class="link-col">
               <h4>Support</h4>
               <a href="index.html#hotlines">Hotlines</a>
-              <a href="services.html">Departments</a>
+              <a class="info-trigger" data-target-info="departments" style="cursor:pointer;">Departments</a>
               <a href="about_cainta.html#barangays">Barangays</a>
-              <a href="#">FAQ</a>
+              <a href="faq.html">FAQ</a>
             </div>
             <div class="link-col">
               <h4>Government</h4>
-              <a href="officials.html">Municipal Officials</a>
-              <a href="services.html">Departments &amp; Offices</a>
-              <a href="disclosure.html">Full Disclosure</a>
-              <a href="services.html#online">Online Services</a>
+              <a href="officials.html">Mayor's Office</a>
+              <a href="officials.html">Officials</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; 2024 Municipality of Cainta. All rights reserved.</span>
+          <p>© 2026 Municipality of Cainta. All rights reserved.</p>
           <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Accessibility</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookie.html">Cookie Policy</a>
           </div>
         </div>
       </footer>
@@ -592,15 +592,26 @@
       <button class="chat-close" id="chatClose">×</button>
     </div>
     <div class="chat-body" id="chatBody" data-lenis-prevent>
-      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please choose a topic below.</div>
-      <div class="chat-options" id="chatOptions">
-        <button class="chat-opt-btn" data-q="emergency">What are the emergency numbers?</button>
-        <button class="chat-opt-btn" data-q="bplo">How to apply for a Business Permit?</button>
-        <button class="chat-opt-btn" data-q="taxes">How do I pay taxes online?</button>
-        <button class="chat-opt-btn" data-q="pwd">How to apply for PWD ID?</button>
-        <button class="chat-opt-btn" data-q="location">Where is the Municipal Hall?</button>
+      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please select a category below:</div>
+      
+      <div class="chat-options-wrapper" id="chatOptionsWrapper">
+        <div class="chat-category">🚨 Emergencies & Health</div>
+        <button class="chat-opt-btn" data-q="emergency">Emergency Hotlines</button>
+        <button class="chat-opt-btn" data-q="hospital">Municipal Hospital</button>
+
+        <div class="chat-category">📝 Permits & IDs</div>
+        <button class="chat-opt-btn" data-q="bplo">Apply for Business Permit</button>
+        <button class="chat-opt-btn" data-q="pwd">PWD ID Requirements</button>
+        <button class="chat-opt-btn" data-q="senior">Senior Citizen ID</button>
+
+        <div class="chat-category">💳 Taxes & Online Services</div>
+        <button class="chat-opt-btn" data-q="taxes">Pay Taxes Online</button>
+
+        <div class="chat-category">🏛️ General Information</div>
+        <button class="chat-opt-btn" data-q="location">Municipal Hall Location</button>
+        <button class="chat-opt-btn" data-q="hours">Operating Hours</button>
         <button class="chat-opt-btn" data-q="mayor">Who is the Mayor?</button>
-        <button class="chat-opt-btn" data-q="contact">How can I contact the office?</button>
+        <button class="chat-opt-btn" data-q="contact">Contact the Office</button>
       </div>
     </div>
   </div>

@@ -165,11 +165,11 @@ window.addEventListener("load", () => {
   const modalMap = document.getElementById('modalMap');
 
   const touristData = [
-    { title: "Museo de Cainta", img: "url('pics/tourist_spots/museocainta.avif')", desc: "Discover the rich historical tapestry of Cainta.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>` },
-    { title: "One Cainta Arena", img: "url('pics/tourist_spots/onearena.jpg')", desc: "A premier multipurpose venue hosting major sports events.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>` },
-    { title: "Oval Park", img: "url('pics/tourist_spots/ovalpark.webp')", desc: "The green heart of the municipality.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>` },
+    { title: "Museo de Cainta", img: "url('pics/tourist_spots/museocainta.avif')", desc: "Discover the rich historical tapestry of Cainta.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3706974036136!2d121.11403817599052!3d14.577940685905759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7002bc4fbc5%3A0xd6cc6421d2d0fbbc!2sMuseo%20Cainta!5e0!3m2!1sen!2sph!4v1778512044447!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` },
+    { title: "One Cainta Arena", img: "url('pics/tourist_spots/onearena.jpg')", desc: "A premier multipurpose venue hosting major sports events.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.358296741511!2d121.11669367599043!3d14.57864818590512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c79b5e17b169%3A0xa96f358323c8784!2sOne%20Arena!5e0!3m2!1sen!2sph!4v1778512066876!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` },
+    { title: "Oval Park", img: "url('pics/tourist_spots/ovalpark.webp')", desc: "The green heart of the municipality.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.308121947583!2d121.11956347599049!3d14.5815104859026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7cb9894b079%3A0x72d90463fbe8726e!2sOne%20Cainta%20Oval%20Park!5e0!3m2!1sen!2sph!4v1778511999312!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> ` },
     { title: "ROTC Grounds", img: "url('pics/tourist_spots/rotc.jpg')", desc: "A historic open space originally dedicated to military training.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>` },
-    { title: "Sta. Lucia Mall", img: "url('pics/tourist_spots/stalucia.jpg')", desc: "One of the pioneering and most iconic shopping destinations in Rizal.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>` }
+    { title: "Sta. Lucia Mall", img: "url('pics/tourist_spots/stalucia.jpg')", desc: "One of the pioneering and most iconic shopping destinations in Rizal.", embed: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6807019065027!2d121.09487468572073!3d14.61725634944077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b910e4e40d03%3A0x5b85edc8e9248ba1!2sSta.%20Lucia%20Mall!5e0!3m2!1sen!2sph!4v1778512119929!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` }
   ];
 
   let current = 2;
@@ -713,7 +713,8 @@ window.addEventListener("load", () => {
   const contactModal = document.getElementById('contactModal');
 
   if (contactModal) {
-    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    // The $= selector catches ANY link ending in #contact (including index.html#contact)
+    document.querySelectorAll('a[href$="#contact"]').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault(); 
         contactModal.classList.add('active');
@@ -729,26 +730,6 @@ window.addEventListener("load", () => {
     document.getElementById('contactModalClose')?.addEventListener('click', closeContactModal);
     document.getElementById('contactModalOverlay')?.addEventListener('click', closeContactModal);
   }
-})();
-
-// ==========================================================================
-// 14. DEV TOAST NOTIFICATION (DEAD LINKS)
-// ==========================================================================
-(function initToastSystem() {
-  const toast = document.createElement('div');
-  toast.className = 'dev-toast';
-  toast.innerHTML = `<span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></span> Feature currently under development.`;
-  document.body.appendChild(toast);
-
-  let toastTimer;
-  document.querySelectorAll('a[href="#"]:not([href="#contact"])').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      toast.classList.add('active');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => { toast.classList.remove('active'); }, 3000);
-    });
-  });
 })();
 
 // ==========================================================================
@@ -778,27 +759,51 @@ window.addEventListener("load", () => {
 })();
 
 // ==========================================================================
-// 16. SMART SEARCH ENGINE (CATEGORIZED & ANCHORED)
+// 16. MASTER UNIFIED SEARCH ENGINE (CATEGORIZED & ANCHORED)
 // ==========================================================================
 (function initSmartSearch() {
   
-  // Categorized database covering the entire municipality
+  // The Master Database covering the entire municipality, officials, barangays, policies, and departments.
   const searchDB = [
+    // Policies, Legal, and Disclosures
+    { title: "Frequently Asked Questions (FAQ)", category: "Help", url: "faq.html", keywords: "faq questions help operating hours requirements" },
+    { title: "Privacy Policy", category: "Legal", url: "privacy.html#privacy-policy", keywords: "privacy data protection security information" },
+    { title: "Cookie Policy", category: "Legal", url: "privacy.html#cookie-policy", keywords: "cookie policy tracking data" },
+    { title: "Terms of Service", category: "Legal", url: "terms.html", keywords: "tos terms rules legal service" },
+    { title: "Full Disclosure Policy & Financials", category: "Transparency", url: "disclosure.html", keywords: "disclosure transparency budget financial report pdf" },
+    
+    // Officials
+    { title: "Mayor Atty. J. Keith P. Nieto", category: "Official", url: "officials.html#mayor", keywords: "mayor kit nieto head executive" },
+    { title: "Vice Mayor Hon. Ace Bernardo Servillon", category: "Official", url: "officials.html#vice-mayor", keywords: "vice mayor ace servillon" },
+    { title: "Sangguniang Bayan Members", category: "Official", url: "officials.html#sb-members", keywords: "sb councilor sanggunian members officials" },
+    
+    // Barangays
+    { title: "Barangay San Andres", category: "Barangay", url: "about_cainta.html#brgy-san-andres", keywords: "san andres barangay brgy contact email" },
+    { title: "Barangay San Isidro", category: "Barangay", url: "about_cainta.html#brgy-san-isidro", keywords: "san isidro barangay brgy contact email" },
+    { title: "Barangay San Juan", category: "Barangay", url: "about_cainta.html#brgy-san-juan", keywords: "san juan barangay brgy contact email" },
+    { title: "Barangay San Roque", category: "Barangay", url: "about_cainta.html#brgy-san-roque", keywords: "san roque barangay brgy contact email" },
+    { title: "Barangay Sta. Rosa", category: "Barangay", url: "about_cainta.html#brgy-sta-rosa", keywords: "sta rosa santa rosa barangay brgy contact email" },
+    { title: "Barangay Sto. Domingo", category: "Barangay", url: "about_cainta.html#brgy-sto-domingo", keywords: "sto domingo santo domingo barangay brgy contact email" },
+    { title: "Barangay Sto. Niño", category: "Barangay", url: "about_cainta.html#brgy-sto-nino", keywords: "sto nino santo nino barangay brgy contact email" },
+    { title: "Barangay Directory", category: "Government", url: "about_cainta.html#barangays", keywords: "barangay directory all" },
+
+    // Services
     { title: "COVID-19 Vaccination & Testing", category: "Service", url: "services.html#covid", keywords: "covid 19 vaccine test swab health virus" },
     { title: "PWD ID Application Requirements", category: "Service", url: "services.html#id-app", keywords: "pwd id application requirements persons with disability" },
     { title: "Senior Citizen ID Application", category: "Service", url: "services.html#id-app", keywords: "senior citizen id application requirements old" },
     { title: "Solo Parent ID Application", category: "Service", url: "services.html#id-app", keywords: "solo parent id application requirements mother father" },
     { title: "Municipal Hospital & Medical Arts", category: "Facility", url: "services.html#hospital", keywords: "hospital medical doctor sick emergency" },
     { title: "One Cainta College Portal", category: "Education", url: "services.html#college", keywords: "college school education student enroll" },
-    { title: "History of Cainta", category: "History", url: "about_cainta.html#history", keywords: "history sepoy background founded old" },
-    { title: "Tourist Spots & Landmarks", category: "Place", url: "about_cainta.html#tourist-spots", keywords: "tourist travel spot park arena mall rotc museo" },
-    { title: "Barangay Directory", category: "Government", url: "about_cainta.html#barangays", keywords: "barangay brgy san andres domingo isidro juan nino roque rosa" },
-    { title: "Mayor Atty. J. Keith P. Nieto", category: "Official", url: "officials.html", keywords: "mayor kit nieto head executive" },
-    { title: "Vice Mayor Hon. Ace Bernardo Servillon", category: "Official", url: "officials.html", keywords: "vice mayor ace servillon" },
-    { title: "Emergency Hotlines", category: "Contact", url: "index.html#hotlines", keywords: "hotline emergency rescue police fire hospital" },
     { title: "E-Payment & Online Services", category: "Service", url: "services.html#online", keywords: "pay online taxes rpt business permit" },
+
+    // History and Spots
+    { title: "History of Cainta", category: "History", url: "about_cainta.html#history", keywords: "history sepoy background founded old" },
+    { title: "Tourist Spots & Landmarks", category: "Place", url: "index.html#tourist-spots", keywords: "tourist travel spot park arena mall rotc museo" },
     
-    // Core Departments (Mapped exactly to department.html IDs)
+    // Contact
+    { title: "Emergency Hotlines", category: "Contact", url: "index.html#hotlines", keywords: "hotline emergency rescue police fire hospital" },
+
+    // Core Departments
     { title: "Municipal Treasury Office", category: "Department", url: "departments.html#dept-treasury", keywords: "departments offices directory treasury tax pay collection finance" },
     { title: "Business Permits & Licensing (BPLO)", category: "Department", url: "departments.html#dept-bplo", keywords: "departments offices directory bplo business permit license renew commercial" },
     { title: "Municipal Accounting Office", category: "Department", url: "departments.html#dept-accounting", keywords: "departments offices directory accounting financial audit" },
@@ -837,48 +842,28 @@ window.addEventListener("load", () => {
     { title: "Municipal Info Desk", category: "Department", url: "departments.html#dept-info", keywords: "departments offices directory info desk inquiry ask" }
   ];
 
-  const searchToggleBtn = document.getElementById('searchToggleBtn');
-  const searchModal = document.getElementById('searchModal');
-  const closeSearchModal = document.getElementById('closeSearchModal');
-  const searchInput = document.getElementById('searchInput');
-  const searchResults = document.getElementById('searchResults');
+  // Helper function to execute search
+  function executeSearch(query, resultsContainer, modalElement) {
+    if(!query || query.length === 0) return;
+    const lowerQuery = query.toLowerCase();
 
-  if(searchToggleBtn && searchModal) {
-    searchToggleBtn.addEventListener('click', () => {
-      searchModal.classList.add('active');
-      searchInput.value = '';
-      searchResults.innerHTML = '';
-      setTimeout(() => searchInput.focus(), 100);
-      if (typeof lenis !== 'undefined') lenis.stop(); 
-    });
+    // 1. Search through the master database array
+    let filtered = searchDB.filter(item => 
+      item.title.toLowerCase().includes(lowerQuery) || 
+      (item.keywords && item.keywords.includes(lowerQuery))
+    );
 
-    closeSearchModal.addEventListener('click', () => {
-      searchModal.classList.remove('active');
-      if (typeof lenis !== 'undefined') lenis.start(); 
-    });
-
-    searchInput.addEventListener('keyup', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      searchResults.innerHTML = '';
-      
-      if(query.length === 0) return;
-
-      const filtered = searchDB.filter(item => 
-        item.title.toLowerCase().includes(query) || 
-        (item.keywords && item.keywords.includes(query))
-      );
-
+    // If using the Modal Search Interface (searchModal)
+    if (resultsContainer) {
+      resultsContainer.innerHTML = '';
       if(filtered.length === 0) {
-        searchResults.innerHTML = '<div class="search-empty">No results found for that search.</div>';
+        resultsContainer.innerHTML = '<div class="search-empty">No results found for that search. Try searching for "FAQ", "Hotline", or "Mayor"</div>';
         return;
       }
-
       filtered.forEach(result => {
         const link = document.createElement('a');
         link.href = result.url;
         link.className = 'search-result-item';
-        
-        // Inject Custom Category Badges
         link.innerHTML = `
           <div class="search-result-header">
             <h4>${result.title}</h4>
@@ -887,94 +872,145 @@ window.addEventListener("load", () => {
           <p>Click to view page & details →</p>
         `;
         
-        // Link Click Handler (Enables smooth jumping on the same page!)
         link.addEventListener('click', (e) => {
             const urlObj = new URL(link.href, window.location.origin);
-            
-            // If the anchor is on the exact same page we are already on...
             if (urlObj.pathname === window.location.pathname && urlObj.hash) {
                 e.preventDefault();
-                searchModal.classList.remove('active');
+                if(modalElement) modalElement.classList.remove('active');
                 if (typeof lenis !== 'undefined') {
                     lenis.start();
-                    
-                    // If we are on the services page, automatically click the tab!
                     if (window.location.pathname.includes('services.html') && typeof window.switchTab === 'function') {
                         window.switchTab(urlObj.hash.substring(1));
                     }
-                    
-                    // Smooth scroll down to the exact section (-140px offset for the fixed header)
                     lenis.scrollTo(urlObj.hash, { offset: -140 });
                 }
             } else {
-               // Let normal browser navigation handle jumping to a different page
-               searchModal.classList.remove('active');
+               if(modalElement) modalElement.classList.remove('active');
                if (typeof lenis !== 'undefined') lenis.start(); 
             }
         });
-
-        searchResults.appendChild(link);
+        resultsContainer.appendChild(link);
       });
+    } 
+    // If using the Standard Input Box fallback
+    else {
+      if (filtered.length > 0) {
+        window.location.href = filtered[0].url; // Redirects to the best match
+      } else {
+        alert("No exact match found for '" + query + "'. Try searching for 'FAQ', 'Hotline', 'Privacy', or 'Mayor'.");
+      }
+    }
+  }
+
+  // --- Attach Handlers for the Modal Search Engine ---
+  const searchToggleBtn = document.getElementById('searchToggleBtn');
+  const searchModal = document.getElementById('searchModal');
+  const closeSearchModal = document.getElementById('closeSearchModal');
+  const modalSearchInput = document.getElementById('searchInput');
+  const modalSearchResults = document.getElementById('searchResults');
+
+  if(searchToggleBtn && searchModal && modalSearchInput && modalSearchResults) {
+    searchToggleBtn.addEventListener('click', () => {
+      searchModal.classList.add('active');
+      modalSearchInput.value = '';
+      modalSearchResults.innerHTML = '';
+      setTimeout(() => modalSearchInput.focus(), 100);
+      if (typeof lenis !== 'undefined') lenis.stop(); 
+    });
+
+    closeSearchModal.addEventListener('click', () => {
+      searchModal.classList.remove('active');
+      if (typeof lenis !== 'undefined') lenis.start(); 
+    });
+
+    modalSearchInput.addEventListener('keyup', (e) => {
+      executeSearch(e.target.value.trim(), modalSearchResults, searchModal);
+    });
+  }
+
+  // --- Attach Handlers for the Standard Global Search (Fallback/Alternative) ---
+  const globalSearchBtn = document.getElementById('searchBtn'); // Alternative generic search button
+  const globalSearchInput = document.getElementById('globalSearchInput'); // Alternative input field if it exists
+  
+  if (globalSearchBtn) {
+    globalSearchBtn.addEventListener("click", () => {
+      const val = globalSearchInput ? globalSearchInput.value : modalSearchInput.value;
+      executeSearch(val, null, null);
     });
   }
 })();
 
 // ==========================================================================
-// 17. PRE-PROMPTED CHATBOT
+// 17. ADVANCED CATEGORIZED CHATBOT
 // ==========================================================================
 (function initChatbot() {
   const chatToggleBtn = document.getElementById('chatToggleBtn');
   const chatWidget = document.getElementById('chatWidget');
   const chatClose = document.getElementById('chatClose');
   const chatBody = document.getElementById('chatBody');
-  const chatOptionsContainer = document.getElementById('chatOptions');
+  const chatOptionsWrapper = document.getElementById('chatOptionsWrapper');
   const optBtns = document.querySelectorAll('.chat-opt-btn');
 
   const chatDB = {
-    pwd: "To apply for a PWD ID, you need: <br>1. Valid Gov ID (Cainta address)<br>2. Medical Certificate<br>3. Two 2x2 photos<br>4. Application Form.<br><a href='services.html#id-app'>View full details here.</a>",
-    location: "The Municipal Hall is located at A. Bonifacio Ave, Cainta, Rizal. You can click 'Explore Municipal Hall' on our home page to see the map!",
-    mayor: "The Mayor of Cainta is Atty. J. Keith P. Nieto, JD. He has led the municipality to become the most competitive in the Philippines. <a href='officials.html'>Read more here.</a>",
-    contact: "You can click 'Contact Us' in the menu to send a message, or call our hotlines: <br>RESCUE: 8535-0131<br>PIO: 8696-2617",
-    emergency: "For immediate emergencies, please call RESCUE 131 at 8535-0131. For Fire, call 8696-2616. <br><a href='index.html#hotlines'>View all emergency hotlines.</a>",
-    bplo: "To apply for or renew a Business Permit, you can visit the BPLO office at the Municipal Hall or use our <a href='services.html#online'>Online Business Permit Portal.</a>",
-    taxes: "You can conveniently pay your Real Property Tax (RPT) online through our E-Payment system! <br><a href='services.html#online'>Click here to access the payment portal.</a>"
+    pwd: "To apply for a PWD ID, you need: <br>1. Valid Gov ID (Cainta address)<br>2. Medical Certificate<br>3. Two 2x2 photos<br>4. Application Form.<br><a href='services.html#id-app' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>View full details here.</a>",
+    senior: "For a Senior Citizen ID, visit the OSCA Office. Requirements include a Birth Certificate/Valid ID showing age (60+), a 1x1 photo, and the application form.<br><a href='services.html#id-app' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>View details.</a>",
+    location: "The Municipal Hall is located at A. Bonifacio Ave., Barangay Sto. Domingo, Cainta, Rizal. You can click 'Contact Us' to see our map!",
+    mayor: "The Mayor of Cainta is Atty. J. Keith P. Nieto, JD. He has led the municipality to become the most competitive in the Philippines. <a href='officials.html#mayor' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>Read more here.</a>",
+    contact: "You can send us a message via the Contact Form, or call our hotlines: <br>RESCUE: 8535-0131<br>PIO: 8696-2617<br><a href='index.html#contact' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>Open Contact Form.</a>",
+    emergency: "For immediate emergencies, please call RESCUE 131 at 8535-0131. For Fire, call 8696-2616. <br><a href='index.html#hotlines' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>View all emergency hotlines.</a>",
+    hospital: "The Cainta Municipal Hospital offers extensive medical services and out-patient checkups. <br><a href='services.html#hospital' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>View Hospital Info.</a>",
+    bplo: "To apply for or renew a Business Permit, you can visit the BPLO office at the Municipal Hall or use our Online Portal.<br><a href='departments.html#dept-bplo' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>View BPLO details.</a>",
+    taxes: "You can conveniently pay your Real Property Tax (RPT) online through our E-Payment system! <br><a href='services.html#online' style='color:var(--text-blue); font-weight:bold; text-decoration:underline;'>Access E-Payment.</a>",
+    hours: "The Cainta Municipal Hall is open from Monday to Friday, 8:00 AM to 5:00 PM, excluding regular national holidays and declared local holidays."
   };
 
-  if(chatToggleBtn && chatWidget) {
-    chatToggleBtn.addEventListener('click', () => {
-      chatWidget.classList.add('active');
-    });
-
-    chatClose.addEventListener('click', () => {
-      chatWidget.classList.remove('active');
-    });
+ if(chatToggleBtn && chatWidget) {
+    // This 'toggle' command makes the button both open AND close the chat!
+    chatToggleBtn.addEventListener('click', () => chatWidget.classList.toggle('active'));
+    chatClose.addEventListener('click', () => chatWidget.classList.remove('active'));
 
     optBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const questionText = btn.textContent;
         const answerHtml = chatDB[btn.getAttribute('data-q')];
         
-        chatOptionsContainer.style.display = 'none';
+        // 1. Hide the options menu so the answer is clearly visible
+        chatOptionsWrapper.style.display = 'none';
 
+        // 2. Append User Message
         const userDiv = document.createElement('div');
         userDiv.className = 'chat-msg user';
         userDiv.textContent = questionText;
         chatBody.appendChild(userDiv);
 
+        // 3. Simulate processing and append Bot Message
         setTimeout(() => {
           const botDiv = document.createElement('div');
           botDiv.className = 'chat-msg bot';
           botDiv.innerHTML = answerHtml;
           chatBody.appendChild(botDiv);
           
-          setTimeout(() => {
-            chatOptionsContainer.style.display = 'flex';
-            chatBody.appendChild(chatOptionsContainer);
+          // 4. Create "Ask Another Question" Button
+          const resetWrapper = document.createElement('div');
+          resetWrapper.style.display = 'flex';
+          resetWrapper.style.justifyContent = 'center';
+          
+          const resetBtn = document.createElement('button');
+          resetBtn.className = 'chat-reset-btn';
+          resetBtn.textContent = 'Ask Another Question ↻';
+          resetBtn.onclick = () => {
+            resetWrapper.remove();
+            chatOptionsWrapper.style.display = 'flex'; // Bring menu back
+            chatBody.appendChild(chatOptionsWrapper); // Move menu to the very bottom
             chatBody.scrollTop = chatBody.scrollHeight;
-          }, 1000);
-
+          };
+          
+          resetWrapper.appendChild(resetBtn);
+          chatBody.appendChild(resetWrapper);
+          
+          // Scroll down to the answer
           chatBody.scrollTop = chatBody.scrollHeight;
-        }, 600);
+        }, 500);
       });
     });
   }

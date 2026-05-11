@@ -17,17 +17,19 @@
 
   <header class="site-header" id="header">
     <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
-    <div class="header-center"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></div>
+    <div class="header-center"><a href="index.html">
+        <img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img">
+      </a></div>
     <div class="header-right">
       
       <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="officials.html">Officials</a>
-        <a href="departments.html" style="color: var(--text-blue);">Departments</a>
-        <a href="about_cainta.html">About Cainta</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
+                <a href="index.html" class="active-nav">HOME</a>
+                <a href="services.html">SERVICES</a>
+                <a href="officials.html">OFFICIALS</a>
+                <a href="departments.html">DEPARTMENTS</a>
+                <a href="about_cainta.html">ABOUT CAINTA</a>
+                <a href="index.html#contact">CONTACT US</a>
+            </nav>
 
       <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Search">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -196,6 +198,7 @@
                   <a href="services.html#others" class="sc-link">Free Funeral and Cremation</a>
                   <a href="services.html#others" class="sc-link">Free Anti-Rabies Vax</a>
                   <a href="services.html#others" class="sc-link">Free Spay Program</a>
+                  <a href="disclosure.html" class="sc-link">Disclosure</a>
                 </div>
               </div>
             </div>
@@ -209,21 +212,16 @@
       <section class="content-section">
         <div class="image-stack">
           <div class="section-image-container reveal-wrapper">
-            <div class="image-placeholder reveal-img" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop');"></div>
-          </div>
-          <div class="section-image-container reveal-wrapper">
-            <div class="image-placeholder reveal-img" style="background-image: url('https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=2069&auto=format&fit=crop');"></div>
-          </div>
-          <div class="section-image-container reveal-wrapper">
-            <div class="image-placeholder reveal-img" style="background-image: url('https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=2069&auto=format&fit=crop');"></div>
+            <div class="image-placeholder reveal-img" style="background-image: url('/pics/main_pg_pics/688184239_1505197060975397_7804437015092132753_n.png');"></div>
           </div>
         </div>
 
         <div class="sticky-text-wrapper">
           <div class="section-text">
-            <h2 class="slide-text">History etched in stone</h2>
-            <p class="slide-text">Founded in 1707, Cainta stands as one of the oldest settlements in Rizal. Its rich past—from the arrival of Sepoy soldiers to its role in the Philippine Revolution—is preserved in every corner of the municipality.</p>
-          </div>
+                <h2 class="slide-text" style="text-transform: uppercase; font-size: 3rem;">A Legacy Beyond Measure</h2>
+                <p class="slide-text">Step into a town where history lives in every corner. Founded in 1707, Cainta is one of the oldest and most culturally unique settlements in Rizal. Our story is defined by the resilience of the Sepoy soldiers and our pivotal role in the Philippine Revolution. Today, this heritage continues to thrive through our vibrant traditions and the warm hospitality of our people.</p>
+                <a href="about_cainta.html" class="action-btn outline-btn slide-text">Discover More</a>
+            </div>
         </div>
       </section>
 
@@ -359,23 +357,23 @@
               <a href="index.html#hotlines">Hotlines</a>
               <a class="info-trigger" data-target-info="departments" style="cursor:pointer;">Departments</a>
               <a href="about_cainta.html#barangays">Barangays</a>
-              <a href="#">FAQ</a>
+              <a href="faq.html">FAQ</a>
             </div>
             <div class="link-col">
               <h4>Government</h4>
               <a href="officials.html">Mayor's Office</a>
               <a href="officials.html">Officials</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <p>© 2026 Municipality of Cainta. All rights reserved.</p>
           <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookie.html">Cookie Policy</a>
           </div>
         </div>
       </footer>
@@ -400,15 +398,26 @@
       <button class="chat-close" id="chatClose">×</button>
     </div>
     <div class="chat-body" id="chatBody" data-lenis-prevent>
-      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please choose a topic below.</div>
-      <div class="chat-options" id="chatOptions">
-        <button class="chat-opt-btn" data-q="emergency">What are the emergency numbers?</button>
-        <button class="chat-opt-btn" data-q="bplo">How to apply for a Business Permit?</button>
-        <button class="chat-opt-btn" data-q="taxes">How do I pay taxes online?</button>
-        <button class="chat-opt-btn" data-q="pwd">How to apply for PWD ID?</button>
-        <button class="chat-opt-btn" data-q="location">Where is the Municipal Hall?</button>
+      <div class="chat-msg bot">Hello! I am your virtual assistant. How can I help you today? Please select a category below:</div>
+      
+      <div class="chat-options-wrapper" id="chatOptionsWrapper">
+        <div class="chat-category">🚨 Emergencies & Health</div>
+        <button class="chat-opt-btn" data-q="emergency">Emergency Hotlines</button>
+        <button class="chat-opt-btn" data-q="hospital">Municipal Hospital</button>
+
+        <div class="chat-category">📝 Permits & IDs</div>
+        <button class="chat-opt-btn" data-q="bplo">Apply for Business Permit</button>
+        <button class="chat-opt-btn" data-q="pwd">PWD ID Requirements</button>
+        <button class="chat-opt-btn" data-q="senior">Senior Citizen ID</button>
+
+        <div class="chat-category">💳 Taxes & Online Services</div>
+        <button class="chat-opt-btn" data-q="taxes">Pay Taxes Online</button>
+
+        <div class="chat-category">🏛️ General Information</div>
+        <button class="chat-opt-btn" data-q="location">Municipal Hall Location</button>
+        <button class="chat-opt-btn" data-q="hours">Operating Hours</button>
         <button class="chat-opt-btn" data-q="mayor">Who is the Mayor?</button>
-        <button class="chat-opt-btn" data-q="contact">How can I contact the office?</button>
+        <button class="chat-opt-btn" data-q="contact">Contact the Office</button>
       </div>
     </div>
   </div>
