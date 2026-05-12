@@ -9,24 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* NAVIGATION READABILITY FIX FOR WHITE BACKGROUND PAGES */
     .site-header { background: #fff !important; box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important; }
     .desktop-nav a { color: var(--text-main) !important; font-weight: 600; }
     .desktop-nav a:hover, .desktop-nav a.active-nav { color: var(--text-blue) !important; }
-    .municipality-name { color: var(--text-main) !important; }
-    .search-toggle-btn { color: var(--text-main) !important; }
+    .municipality-name, .search-toggle-btn { color: var(--text-main) !important; }
     .hamburger span { background-color: var(--text-main) !important; }
-
     .faq-container { max-width: 900px; margin: 0 auto; padding-bottom: 50px; }
     .faq-category { margin-top: 40px; margin-bottom: 20px; color: var(--text-main); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; font-family: var(--font-heading); font-size: 1.5rem; }
     .faq-accordion { background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 15px; overflow: hidden; border-left: 4px solid var(--text-blue); }
-    .faq-question { background: #f8fafc; padding: 20px; cursor: pointer; font-weight: 600; color: var(--text-blue); display: flex; justify-content: space-between; align-items: center; }
+    .faq-question { background: #f8fafc; padding: 15px 20px; cursor: pointer; font-weight: 600; color: var(--text-blue); display: flex; justify-content: space-between; align-items: center; }
     .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; color: var(--text-muted); line-height: 1.6; }
-    .faq-accordion.active .faq-answer { padding: 20px; max-height: 800px; }
+    .faq-accordion.active .faq-answer { padding: 20px; max-height: 1200px; }
     .faq-accordion.active .faq-question { background: #e2e8f0; }
-    .faq-link { color: var(--text-blue); text-decoration: underline; font-weight: 600; }
-    
-    .faq-search-box { width: 100%; padding: 15px 20px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; margin-bottom: 30px; font-family: var(--font-body); outline: none; transition: border-color 0.3s; }
+    .faq-link { color: var(--text-blue); text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px; border: 1px solid var(--text-blue); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; transition: 0.2s; }
+    .faq-link:hover { background: var(--text-blue); color: #fff; }
+    .faq-search-box { width: 100%; padding: 15px 20px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; margin-bottom: 30px; font-family: var(--font-body); outline: none; }
     .faq-search-box:focus { border-color: var(--text-blue); }
   </style>
 </head>
@@ -36,27 +33,37 @@
 
   <header class="site-header" id="header">
     <div class="header-left"><span class="municipality-name">Municipality of Cainta</span></div>
-    <div class="header-center"><a href="index.html"><img src="pics/main_pg_pics/cainta_logo.png" alt="Municipality of Cainta Logo" class="logo-img"></a></div>
+    <div class="header-center"><a href="index.html"><img src="pics/main_pg_pics/cainta_logo.png" alt="Cainta Logo" class="logo-img"></a></div>
     <div class="header-right">
       <nav class="desktop-nav">
-        <a href="index.html">HOME</a>
-        <a href="services.html">SERVICES</a>
-        <a href="officials.html">OFFICIALS</a>
-        <a href="departments.html">DEPARTMENTS</a>
-        <a href="about_cainta.html">ABOUT CAINTA</a>
-        <a href="index.html#contact">CONTACT US</a>
+        <a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="officials.html">OFFICIALS</a>
+        <a href="departments.html">DEPARTMENTS</a><a href="about_cainta.html">ABOUT CAINTA</a><a href="index.html#contact">CONTACT US</a>
       </nav>
-      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Search">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <div class="hamburger"><span></span><span></span><span></span></div>
-      </button>
+      <button class="search-toggle-btn" id="searchToggleBtn"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+      <button class="menu-toggle" id="menuToggle"><div class="hamburger"><span></span><span></span><span></span></div></button>
       <nav class="dropdown-menu" id="dropdownMenu">
         <ul class="hList">
           <li><a href="index.html" class="menu"><h2 class="menu-title">Home</h2></a></li>
-          <li><div class="menu"><h2 class="menu-title menu-title_2nd">About Cainta</h2><ul class="menu-dropdown"><li><a href="about_cainta.html#history">History</a></li><li><a href="about_cainta.html#culture">Culture</a></li><li><a href="index.html#tourist-spots">Tourist Spots</a></li></ul></div></li>
-          <li><div class="menu"><h2 class="menu-title menu-title_3rd">Government</h2><ul class="menu-dropdown"><li><a href="officials.html">Municipal Officials</a></li><li><a href="services.html">Departments & Offices</a></li><li><a href="disclosure.html">Full Disclosure</a></li></ul></div></li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_2nd">About Cainta</h2>
+              <ul class="menu-dropdown">
+                <li><a href="about_cainta.html#history">History</a></li>
+                <li><a href="about_cainta.html#culture">Culture</a></li>
+                <li><a href="index.html#tourist-spots">Tourist Spots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="menu">
+              <h2 class="menu-title menu-title_3rd">Government</h2>
+              <ul class="menu-dropdown">
+                <li><a href="officials.html">Municipal Officials</a></li>
+                <li><a href="services.html">Departments & Offices</a></li>
+                <li><a href="disclosure.html">Full Disclosure</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#contact" class="menu"><h2 class="menu-title menu-title_4th">Contact Us</h2></a></li>
         </ul>
       </nav>
@@ -68,144 +75,132 @@
       <div class="container faq-container">
         <div class="section_header center reveal fade-bottom">
           <h2 class="section_title" style="font-size: 2.5rem;">Interactive <span style="color: var(--text-blue);">Help Center</span></h2>
-          <p class="section_subtitle mb-large">Find answers to the most commonly asked questions below.</p>
+          <p class="section_subtitle mb-large">Search or browse through 100 detailed municipal questions below.</p>
         </div>
 
-        <input type="text" id="faqSearch" class="faq-search-box reveal fade-bottom" placeholder="Search for a question (e.g., 'Permit', 'Hospital', 'ID')...">
+        <input type="text" id="faqSearch" class="faq-search-box reveal fade-bottom" placeholder="Search for a question (e.g., 'Permit', 'Hospital', 'ID', 'Dog')...">
 
         <div id="faqList" class="reveal fade-bottom">
           
-          <h3 class="faq-category">General Information & Operations</h3>
-          <div class="faq-accordion" data-tags="hours open close time municipal hall days">
-            <div class="faq-question">1. What are the operating hours of the Cainta Municipal Hall? <span>+</span></div>
-            <div class="faq-answer">The Cainta Municipal Hall is open from Monday to Friday, 8:00 AM to 5:00 PM, excluding regular national holidays and declared local holidays.</div>
-          </div>
-          <div class="faq-accordion" data-tags="location address where map find">
-            <div class="faq-question">2. Where is the Cainta Municipal Hall located? <span>+</span></div>
-            <div class="faq-answer">It is located at A. Bonifacio Ave., Barangay Sto. Domingo, Cainta, Rizal.</div>
-          </div>
-          <div class="faq-accordion" data-tags="mayor contact leader kit nieto">
-            <div class="faq-question">3. Who is the current Mayor of Cainta? <span>+</span></div>
-            <div class="faq-answer">The current Mayor of Cainta is Atty. J. Keith "Kit" P. Nieto. <br><a href="officials.html#mayor" class="faq-link">Read the Mayor's Profile</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="vice mayor ace servillon">
-            <div class="faq-question">4. Who is the current Vice Mayor? <span>+</span></div>
-            <div class="faq-answer">The current Vice Mayor is Hon. Ace Bernardo Servillon. <br><a href="officials.html#vice-mayor" class="faq-link">Read the Vice Mayor's Profile</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="sb members sangguniang bayan councilors">
-            <div class="faq-question">5. Who are the Sangguniang Bayan Members? <span>+</span></div>
-            <div class="faq-answer">Our municipality has 8 distinguished Sangguniang Bayan members who shape local legislation. <br><a href="officials.html#sb-members" class="faq-link">View all SB Members here</a>.</div>
-          </div>
+          <h3 class="faq-category">1. General Information & Operations</h3>
+          <div class="faq-accordion" data-tags="hours open close time municipal hall days"><div class="faq-question">1. What are the operating hours of the Cainta Municipal Hall? <span>+</span></div><div class="faq-answer">The Cainta Municipal Hall operates from Monday to Friday, 8:00 AM to 5:00 PM. We implement a strict "No Noon Break" policy to ensure continuous public service for front-line transactions. We are closed on weekends and declared national/local holidays.</div></div>
+          <div class="faq-accordion" data-tags="location address where map find"><div class="faq-question">2. Where is the Cainta Municipal Hall located? <span>+</span></div><div class="faq-answer">The main government building is located at A. Bonifacio Ave., Barangay Sto. Domingo, Cainta, Rizal. You can view our exact map pinning and get directions via our Contact page. <br><a href="index.html#contact" class="faq-link">View Location Map</a></div></div>
+          <div class="faq-accordion" data-tags="mayor contact leader kit nieto"><div class="faq-question">3. Who is the current Mayor of Cainta? <span>+</span></div><div class="faq-answer">The current Municipal Mayor is Atty. J. Keith "Kit" P. Nieto. Under his multi-term leadership, Cainta was elevated to the status of the richest municipality in the Philippines and awarded Most Competitive Municipality multiple times. <br><a href="officials.html#mayor" class="faq-link">Read the Mayor's Full Profile</a></div></div>
+          <div class="faq-accordion" data-tags="vice mayor ace servillon"><div class="faq-question">4. Who is the current Vice Mayor? <span>+</span></div><div class="faq-answer">The current Vice Mayor is Hon. Ace Bernardo Servillon. He is a three-term Vice Mayor and previously served as a municipal councilor, heading critical committees such as Rules and Ordinances. <br><a href="officials.html#vice-mayor" class="faq-link">Read the Vice Mayor's Profile</a></div></div>
+          <div class="faq-accordion" data-tags="sb members sangguniang bayan councilors"><div class="faq-question">5. Who are the Sangguniang Bayan Members? <span>+</span></div><div class="faq-answer">Our municipality has 8 distinguished Sangguniang Bayan (Municipal Council) members who draft and shape local legislation. They work closely with the Mayor to implement ordinances. <br><a href="officials.html#sb-members" class="faq-link">View the 8 Councilors Directory</a></div></div>
+          <div class="faq-accordion" data-tags="contact us email message"><div class="faq-question">6. How can I send a message directly to the Mayor's Office? <span>+</span></div><div class="faq-answer">You can easily send a direct message, request, or formal complaint using our integrated digital Contact Form. A representative from the Mayor's Action Team (MAT) monitors this daily and routes it to the appropriate department. <br><a href="#contact" class="faq-link">Open the Contact Form</a></div></div>
+          <div class="faq-accordion" data-tags="pio public information news"><div class="faq-question">7. Where can I find official news updates? <span>+</span></div><div class="faq-answer">Official announcements, class suspensions, and municipal news are released by the Public Information Office (PIO). You can follow their official Facebook page or contact them directly at 8696-2617. <br><a href="departments.html#dept-pio" class="faq-link">View PIO Details</a></div></div>
+          <div class="faq-accordion" data-tags="legal office lawyer free"><div class="faq-question">8. Does the LGU offer free legal assistance? <span>+</span></div><div class="faq-answer">Yes. The Municipal Legal Office provides free legal advice and assistance in drafting simple affidavits for indigent residents of Cainta who need them for acquiring municipal/social services. <br><a href="departments.html#dept-legal" class="faq-link">Go to Legal Office</a></div></div>
+          <div class="faq-accordion" data-tags="info desk questions queries"><div class="faq-question">9. Where is the Information Desk? <span>+</span></div><div class="faq-answer">The physical Municipal Info Desk is located immediately at the main lobby of the Municipal Hall. For digital assistance, you can use the Cainta Chatbot floating at the bottom right of your screen! <br><a href="departments.html#dept-info" class="faq-link">View Info Desk details</a></div></div>
+          <div class="faq-accordion" data-tags="barangay directory list contact"><div class="faq-question">10. How do I contact my Barangay Hall? <span>+</span></div><div class="faq-answer">We maintain an updated, comprehensive digital directory of all 7 Barangays of Cainta (San Andres, San Isidro, San Juan, San Roque, Sta. Rosa, Sto. Domingo, Sto. Niño), complete with their Punong Barangay, phone numbers, and official emails. <br><a href="about_cainta.html#barangays" class="faq-link">Access the Barangay Directory</a></div></div>
 
-          <h3 class="faq-category">Business Permits & Taxes</h3>
-          <div class="faq-accordion" data-tags="business permit apply renew bplo requirements">
-            <div class="faq-question">6. How do I apply for a new Business Permit? <span>+</span></div>
-            <div class="faq-answer">You can apply at the Business Permits and Licensing Office (BPLO). Requirements: Barangay Clearance, DTI/SEC Registration, and Contract of Lease (if renting). <br><a href="departments.html#dept-bplo" class="faq-link">View BPLO Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="business permit renewal bplo deadline">
-            <div class="faq-question">7. When is the deadline for Business Permit Renewal? <span>+</span></div>
-            <div class="faq-answer">Business permit renewals are typically conducted every January 1 to 20 of the year.</div>
-          </div>
-          <div class="faq-accordion" data-tags="working permit occupational health police clearance">
-            <div class="faq-question">8. What are the requirements for a Working/Occupational Permit? <span>+</span></div>
-            <div class="faq-answer">Applicants must secure a Health Certificate from the Municipal Health Office, a Police Clearance, and a Barangay Clearance before proceeding to the BPLO for the Mayor's Permit to Work.</div>
-          </div>
-          <div class="faq-accordion" data-tags="rpt real property tax pay online amilyar land assessor">
-            <div class="faq-question">9. Can I pay my Real Property Taxes (RPT) online? <span>+</span></div>
-            <div class="faq-answer">Yes, to avoid long lines, we highly encourage residents to use the <a href="services.html#online" class="faq-link">Cainta E-Payment Portal</a> for RPT and Business Tax assessments.</div>
-          </div>
-          <div class="faq-accordion" data-tags="treasury pay physical cashier">
-            <div class="faq-question">10. Where do I pay my taxes physically? <span>+</span></div>
-            <div class="faq-answer">Physical tax payments and fee collections are handled by the Municipal Treasury Office located on the Ground Floor of the Municipal Hall. <br><a href="departments.html#dept-treasury" class="faq-link">View Treasury Office</a>.</div>
-          </div>
+          <h3 class="faq-category">2. Business Permits & Taxes</h3>
+          <div class="faq-accordion" data-tags="business permit apply renew bplo"><div class="faq-question">11. How do I apply for a new Business Permit? <span>+</span></div><div class="faq-answer">New businesses must apply at the Business Permits and Licensing Office (BPLO) on the Ground Floor. The primary requirements include: Barangay Business Clearance, Locational/Zoning Clearance from MPDC, and your DTI or SEC Registration. <br><a href="departments.html#dept-bplo" class="faq-link">View BPLO Office Details</a></div></div>
+          <div class="faq-accordion" data-tags="business permit renewal bplo deadline"><div class="faq-question">12. When is the deadline for Business Permit Renewal? <span>+</span></div><div class="faq-answer">Business permit renewals are mandated by law to be conducted every January 1 to 20 of the year. Surcharges and penalties apply for late renewals unless an official extension is declared by the Mayor.</div></div>
+          <div class="faq-accordion" data-tags="working permit occupational health police clearance"><div class="faq-question">13. What are the requirements for a Working/Occupational Permit? <span>+</span></div><div class="faq-answer">Employees working within Cainta must secure a Mayor's Permit to Work from the BPLO. Pre-requisites include: a Health Certificate from the Municipal Health Office, a National/Local Police Clearance, and a Barangay Clearance.</div></div>
+          <div class="faq-accordion" data-tags="rpt real property tax pay online amilyar"><div class="faq-question">14. Can I pay my Real Property Taxes (RPT) online? <span>+</span></div><div class="faq-answer">Yes! To help residents avoid long lines, the municipality has integrated an E-Payment Portal. You can assess and pay your Real Property Tax (Amilyar) and Business Taxes safely from your home. <br><a href="services.html#online" class="faq-link">Access the E-Payment Portal</a></div></div>
+          <div class="faq-accordion" data-tags="treasury pay physical cashier"><div class="faq-question">15. Where do I pay my taxes physically? <span>+</span></div><div class="faq-answer">All physical tax payments, fee collections, and issuance of Official Receipts are handled by the Municipal Treasury Office located on the Ground Floor of the Municipal Hall. <br><a href="departments.html#dept-treasury" class="faq-link">Go to Treasury Office</a></div></div>
+          <div class="faq-accordion" data-tags="assessor appraisal land property value declaration"><div class="faq-question">16. Where can I get a Tax Declaration or Property Appraisal? <span>+</span></div><div class="faq-answer">Property appraisals, issuance of Tax Declarations, and mapping of lands/buildings are exclusively issued and managed by the Municipal Assessor's Office. <br><a href="departments.html#dept-assessor" class="faq-link">Go to Assessor's Office</a></div></div>
+          <div class="faq-accordion" data-tags="business closure retire bplo"><div class="faq-question">17. How do I declare a business closure? <span>+</span></div><div class="faq-answer">To officially close a business and stop the accumulation of taxes, you must file a Notice of Retirement of Business at the BPLO, submit your original permits, and settle any outstanding gross receipt tax obligations at the Treasury.</div></div>
+          <div class="faq-accordion" data-tags="cedula community tax certificate"><div class="faq-question">18. Where do I get a Cedula (Community Tax Certificate)? <span>+</span></div><div class="faq-answer">Cedulas are issued rapidly by the Municipal Treasury Office. You only need to present a valid ID and fill out a basic information and income declaration slip at the designated window.</div></div>
+          <div class="faq-accordion" data-tags="zoning clearance mpdc"><div class="faq-question">19. Do I need a Zoning Clearance for my business? <span>+</span></div><div class="faq-answer">Yes, a Locational/Zoning Clearance is a strict prerequisite for acquiring a Business Permit or a Building Permit to ensure your structure complies with Cainta's Comprehensive Land Use Plan. <br><a href="departments.html#dept-mpdc" class="faq-link">View MPDC Directory</a></div></div>
+          <div class="faq-accordion" data-tags="weights measures scale calibration"><div class="faq-question">20. Who calibrates weighing scales in the public market? <span>+</span></div><div class="faq-answer">To protect consumers from fraud, the Municipal Treasury Office handles the mandatory annual testing, sealing, and calibration of all weights and measures used by market vendors.</div></div>
 
-          <h3 class="faq-category">Health, Hospital & Emergency</h3>
-          <div class="faq-accordion" data-tags="emergency rescue ambulance fire police contact number hotline">
-            <div class="faq-question">11. Who do I call for medical emergencies or rescue? <span>+</span></div>
-            <div class="faq-answer">For immediate response, contact the Cainta MDRRMO (RESCUE 131) at <strong>8535-0131</strong>. They are operational 24/7. <br><a href="index.html#contact" class="faq-link">View all Hotlines</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="police hotline safety security pnp">
-            <div class="faq-question">12. What is the hotline for the Cainta Police? <span>+</span></div>
-            <div class="faq-answer">For police assistance, you can contact the Cainta PNP or coordinate with the Municipal Public Safety Office. <br><a href="departments.html#dept-safety" class="faq-link">View Public Safety Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="fire station hotline bfp">
-            <div class="faq-question">13. What is the hotline for the Fire Station? <span>+</span></div>
-            <div class="faq-answer">For fire emergencies, please call the local Bureau of Fire Protection (BFP) at <strong>8696-2616</strong>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="hospital medical clinic doctor sick checkup">
-            <div class="faq-question">14. Does Cainta have a public hospital? <span>+</span></div>
-            <div class="faq-answer">Yes! The Cainta Municipal Hospital offers extensive medical services, out-patient checkups, and emergency care. <br><a href="services.html#hospital" class="faq-link">View Hospital Services</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="covid 19 vaccine testing swab antigen rhu">
-            <div class="faq-question">15. Where can I get a COVID-19 vaccination or test? <span>+</span></div>
-            <div class="faq-answer">Vaccinations are distributed across our Rural Health Units (RHUs). Antigen testing is available at Liwasang Bayan. <br><a href="services.html#covid" class="faq-link">View COVID-19 Service Locations</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="animal bite dog cat rabies vet veterinary">
-            <div class="faq-question">16. Where do I go for animal bite injections? <span>+</span></div>
-            <div class="faq-answer">You can visit the Municipal Health Office for anti-rabies vaccines, or the Veterinary Office for animal-related concerns. <br><a href="departments.html#dept-vet" class="faq-link">View Veterinary Office</a>.</div>
-          </div>
+          <h3 class="faq-category">3. Health, Hospital & Wellness</h3>
+          <div class="faq-accordion" data-tags="hospital medical clinic doctor sick"><div class="faq-question">21. Does Cainta have a public hospital? <span>+</span></div><div class="faq-answer">Yes, the Cainta Municipal Hospital is a fully operational public health facility offering extensive medical services, out-patient checkups, laboratory testing, and 24/7 emergency care for residents. <br><a href="services.html#hospital" class="faq-link">View Hospital Services</a></div></div>
+          <div class="faq-accordion" data-tags="covid 19 vaccine testing swab antigen"><div class="faq-question">22. Where can I get a COVID-19 vaccination or test? <span>+</span></div><div class="faq-answer">Vaccinations (primary and boosters) are distributed across our three Rural Health Units (RHUs). Free Antigen testing is continuously available at the Liwasang Bayan testing facility. <br><a href="services.html#covid" class="faq-link">View COVID-19 Facilities</a></div></div>
+          <div class="faq-accordion" data-tags="animal bite dog cat rabies vet veterinary"><div class="faq-question">23. Where do I go for animal bite injections? <span>+</span></div><div class="faq-answer">For dog or cat bites, immediately visit the Animal Bite Treatment Center inside the Municipal Health Office for anti-rabies vaccines. For animal welfare concerns, contact the Vet Office. <br><a href="departments.html#dept-health" class="faq-link">Go to Health Office</a></div></div>
+          <div class="faq-accordion" data-tags="dental teeth extraction cleaning"><div class="faq-question">24. Does the municipality offer free dental services? <span>+</span></div><div class="faq-answer">Yes, basic dental services such as tooth extractions, oral prophylaxis, and dental consultations are provided completely free of charge by the dental wing of the Municipal Health Office.</div></div>
+          <div class="faq-accordion" data-tags="maternity lying in pregnant birth"><div class="faq-question">25. Are there maternity or lying-in clinics? <span>+</span></div><div class="faq-answer">Yes, the LGU operates lying-in clinics specifically equipped for normal, low-risk deliveries. Pregnant residents are encouraged to coordinate with their nearest RHU for prenatal check-ups.</div></div>
+          <div class="faq-accordion" data-tags="tb dots tuberculosis lungs"><div class="faq-question">26. Do you have a TB DOTS program? <span>+</span></div><div class="faq-answer">Yes, free comprehensive tuberculosis screening, x-rays, and a complete regimen of medication are available through the TB DOTS center at the Municipal Health Office.</div></div>
+          <div class="faq-accordion" data-tags="sanitary permit health card food handler"><div class="faq-question">27. How do I get a Sanitary Permit / Health Card? <span>+</span></div><div class="faq-answer">Food handlers and service workers must submit recent stool and urine laboratory results, and attend the mandatory sanitation seminar conducted weekly at the Health Office.</div></div>
+          <div class="faq-accordion" data-tags="dengue fumigation mosquito"><div class="faq-question">28. How can our barangay request Dengue fumigation? <span>+</span></div><div class="faq-answer">Fumigation, misting, and search-and-destroy requests can be routed through your Barangay Captain to the Health Office to combat dengue outbreaks during the rainy season.</div></div>
+          <div class="faq-accordion" data-tags="pharmacy free medicine botika"><div class="faq-question">29. Where can I get free medicines? <span>+</span></div><div class="faq-answer">The Municipal Pharmacy provides free maintenance and basic medicines for indigent residents. You must present a valid doctor's prescription from an RHU or the Municipal Hospital.</div></div>
+          <div class="faq-accordion" data-tags="nutrition feeding program kids weight"><div class="faq-question">30. Does Cainta have a malnutrition feeding program? <span>+</span></div><div class="faq-answer">Yes, the Municipal Nutrition Office conducts regular supplemental feeding programs (typically lasting 120 days) for identified underweight children across various barangays.</div></div>
 
-          <h3 class="faq-category">Social Services & Identification</h3>
-          <div class="faq-accordion" data-tags="senior citizen id osca apply requirements old">
-            <div class="faq-question">17. What are the requirements for a Senior Citizen ID? <span>+</span></div>
-            <div class="faq-answer">Visit the OSCA Office. Requirements: Birth Certificate or valid ID showing age (60+ years old) and Cainta address, 1x1 photo, and the application form. <br><a href="services.html#id-app" class="faq-link">View ID Requirements</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="pwd id person disability requirements apply pdao">
-            <div class="faq-question">18. How do I get a PWD ID? <span>+</span></div>
-            <div class="faq-answer">Proceed to the PDAO Office. Requirements: Medical Certificate, valid Gov ID with Cainta address, two 2x2 photos, and the filled-out application form. <br><a href="departments.html#dept-pdao" class="faq-link">View PDAO Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="solo parent id mswd apply mother father single">
-            <div class="faq-question">19. How do I apply for a Solo Parent ID? <span>+</span></div>
-            <div class="faq-answer">Visit the MSWD Office. Requirements: Barangay Certification (6 mos residency), proof of solo parent status, Income Tax Return (ITR), birth certificates of children, and CENOMAR.</div>
-          </div>
-          <div class="faq-accordion" data-tags="financial medical assistance malasakit center">
-            <div class="faq-question">20. How can I ask for financial or medical assistance? <span>+</span></div>
-            <div class="faq-answer">You may seek assistance through the Malasakit Center or the Mayor's Action Team (MAT) located at the Municipal Hall. <br><a href="departments.html#dept-malasakit" class="faq-link">View Malasakit Center</a>.</div>
-          </div>
+          <h3 class="faq-category">4. Social Services & Identification</h3>
+          <div class="faq-accordion" data-tags="senior citizen id osca apply requirements old"><div class="faq-question">31. What are the requirements for a Senior Citizen ID? <span>+</span></div><div class="faq-answer">Seniors (60+ years old) must visit the OSCA Office. Bring a PSA Birth Certificate or valid ID showing age, proof of Cainta residency, a 1x1 photo, and the filled-out application form. <br><a href="services.html#id-app" class="faq-link">View ID Requirements</a></div></div>
+          <div class="faq-accordion" data-tags="pwd id person disability requirements apply pdao"><div class="faq-question">32. How do I get a PWD ID? <span>+</span></div><div class="faq-answer">Proceed to the PDAO Office. Requirements include a Medical Certificate stating the exact disability, a valid Government ID with a Cainta address, two 2x2 photos, and the application form. <br><a href="departments.html#dept-pdao" class="faq-link">Go to PDAO Office</a></div></div>
+          <div class="faq-accordion" data-tags="solo parent id mswd apply mother father single"><div class="faq-question">33. How do I apply for a Solo Parent ID? <span>+</span></div><div class="faq-answer">Visit the MSWD Office. Bring a Barangay Certification (6 mos residency), proof of solo parent status, Income Tax Return (ITR), birth certificates of children, and a CENOMAR. <br><a href="departments.html#dept-mswd" class="faq-link">Go to MSWD Office</a></div></div>
+          <div class="faq-accordion" data-tags="financial medical assistance malasakit center"><div class="faq-question">34. How can I ask for financial or medical assistance? <span>+</span></div><div class="faq-answer">Indigent residents may seek immediate financial aid for hospital bills, medicines, or emergency needs through the Malasakit Center or the Mayor's Action Team (MAT) located at the Municipal Hall. <br><a href="departments.html#dept-malasakit" class="faq-link">View Malasakit Center</a></div></div>
+          <div class="faq-accordion" data-tags="burial assistance mswd funeral"><div class="faq-question">35. Is there a burial assistance program? <span>+</span></div><div class="faq-answer">Yes, the MSWD provides financial burial assistance to indigent families. Relatives must present the death certificate, a Certificate of Indigency, and a funeral contract.</div></div>
+          <div class="faq-accordion" data-tags="pwd booklets medicine discount"><div class="faq-question">36. How do I request replacement medicine booklets for PWD/Senior? <span>+</span></div><div class="faq-answer">If your purchase booklet is full or lost, replacement booklets can be requested immediately at the respective PDAO or OSCA offices by presenting your valid municipal ID.</div></div>
+          <div class="faq-accordion" data-tags="vawc women child abuse domestic violence"><div class="faq-question">37. Where do I report domestic violence or child abuse? <span>+</span></div><div class="faq-answer">Violence Against Women and Children (VAWC) should be immediately reported to the PNP Women and Children Protection Desk or the crisis intervention wing of the MSWD for urgent rescue and legal action.</div></div>
+          <div class="faq-accordion" data-tags="aics crisis situation dswd"><div class="faq-question">38. Does the LGU offer AICS (Assistance to Individuals in Crisis)? <span>+</span></div><div class="faq-answer">Yes, the AICS program is facilitated locally through the MSWD, providing a safety net for individuals facing sudden emergencies like fire, eviction, or sudden hospitalization.</div></div>
+          <div class="faq-accordion" data-tags="pwd parking placard"><div class="faq-question">39. How do I get a PWD vehicle parking placard? <span>+</span></div><div class="faq-answer">Registered PWDs with mobility/orthopedic impairments can request a vehicle parking placard directly from the PDAO to access designated accessible parking slots in establishments.</div></div>
+          <div class="faq-accordion" data-tags="pension senior citizen stipend dswd"><div class="faq-question">40. How can a senior apply for the social pension? <span>+</span></div><div class="faq-answer">Indigent senior citizens who do not receive any pension from SSS or GSIS can apply for the DSWD Social Pension program by submitting their documents to the local OSCA office for evaluation.</div></div>
 
-          <h3 class="faq-category">Infrastructure, Transport & Environment</h3>
-          <div class="faq-accordion" data-tags="building permit construction engineering house">
-            <div class="faq-question">21. Where do I apply for a Building Permit? <span>+</span></div>
-            <div class="faq-answer">Building permits, occupancy permits, and structural assessments are handled by the Municipal Engineering Office. <br><a href="departments.html#dept-engineering" class="faq-link">View Engineering Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="garbage waste collection menro trash schedule">
-            <div class="faq-question">22. Who handles garbage collection schedules? <span>+</span></div>
-            <div class="faq-answer">The Waste Management Office oversees the daily collection schedules for all barangays in Cainta. <br><a href="departments.html#dept-waste" class="faq-link">View Waste Management</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="tricycle franchise toda ctru transport">
-            <div class="faq-question">23. How do I register or renew my tricycle franchise? <span>+</span></div>
-            <div class="faq-answer">Tricycle franchising and TODA regulations are processed by the Cainta Tricycle Regulatory Unit (CTRU). <br><a href="departments.html#dept-ctru" class="faq-link">View CTRU Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="barangay directory list contact san andres isidro juan roque rosa domingo nino">
-            <div class="faq-question">24. How do I contact my Barangay Hall? <span>+</span></div>
-            <div class="faq-answer">We have a complete directory of the 7 Barangays of Cainta (San Andres, San Isidro, San Juan, San Roque, Sta. Rosa, Sto. Domingo, Sto. Niño) including their numbers and emails. <br><a href="about_cainta.html#barangays" class="faq-link">View Barangay Directory</a>.</div>
-          </div>
+          <h3 class="faq-category">5. Infrastructure & Environment</h3>
+          <div class="faq-accordion" data-tags="building permit construction engineering house"><div class="faq-question">41. Where do I apply for a Building Permit? <span>+</span></div><div class="faq-answer">All structural building permits, occupancy permits, electrical permits, and architectural assessments are strictly handled by the Municipal Engineering Office to ensure public safety. <br><a href="departments.html#dept-engineering" class="faq-link">Go to Engineering Office</a></div></div>
+          <div class="faq-accordion" data-tags="garbage waste collection menro trash schedule"><div class="faq-question">42. Who handles garbage collection schedules? <span>+</span></div><div class="faq-answer">The Waste Management Office oversees the daily garbage truck collection schedules, route planning, and solid waste segregation protocols for all subdivisions and barangays. <br><a href="departments.html#dept-waste" class="faq-link">View Waste Management</a></div></div>
+          <div class="faq-accordion" data-tags="streetlights busted lights engineering"><div class="faq-question">43. How do I report a busted streetlight? <span>+</span></div><div class="faq-answer">Busted municipal streetlights along main roads and barangay streets can be reported to the General Services Office (GSO) or the Engineering Department for immediate bulb replacement.</div></div>
+          <div class="faq-accordion" data-tags="tree cutting permit menro denr"><div class="faq-question">44. Do I need a permit to cut a tree inside my property? <span>+</span></div><div class="faq-answer">Yes. By national law, a tree cutting permit must be secured from MENRO and the DENR before felling any mature tree, even if it is located inside private residential property. <br><a href="departments.html#dept-menro" class="faq-link">Go to MENRO</a></div></div>
+          <div class="faq-accordion" data-tags="drainage flood control clog canal"><div class="faq-question">45. How do I request drainage declogging? <span>+</span></div><div class="faq-answer">Requests for declogging of street canals, siphoning of drainage, and flood control maintenance should be forwarded to the Engineering Office, especially before the rainy season.</div></div>
+          <div class="faq-accordion" data-tags="fencing permit wall boundary"><div class="faq-question">46. Do I need a permit to build a fence? <span>+</span></div><div class="faq-answer">Yes, erecting a perimeter wall or fence requires a Fencing Permit. This must be applied for at the Engineering Office to ensure it doesn't encroach on public sidewalks or property lines.</div></div>
+          <div class="faq-accordion" data-tags="excavation road dig water pipe"><div class="faq-question">47. Who issues excavation permits for road digging? <span>+</span></div><div class="faq-answer">The Engineering Office issues excavation permits for private contractors, Maynilad, or residents needing to dig up municipal roads for plumbing or electrical conduit installations.</div></div>
+          <div class="faq-accordion" data-tags="noise pollution loud music karaoke menro"><div class="faq-question">48. Where do I complain about severe noise pollution? <span>+</span></div><div class="faq-answer">Severe noise disturbances (like late-night karaoke) violating local ordinances can be reported to your Barangay officials or the Municipal Public Safety Office for immediate dispatch.</div></div>
+          <div class="faq-accordion" data-tags="smoke belching vehicle exhaust"><div class="faq-question">49. Does Cainta apprehend smoke-belching vehicles? <span>+</span></div><div class="faq-answer">Yes, the MENRO, in coordination with Traffic Enforcers, conducts random anti-smoke belching operations on major thoroughfares to maintain the municipality's air quality.</div></div>
+          <div class="faq-accordion" data-tags="stray dogs pets pound vet animal control"><div class="faq-question">50. Who do I call to report stray dogs? <span>+</span></div><div class="faq-answer">Packs of stray dogs posing a risk to the community should be reported to the Municipal Veterinary Office for safe impounding and anti-rabies control. <br><a href="departments.html#dept-vet" class="faq-link">Go to Veterinary Office</a></div></div>
 
-          <h3 class="faq-category">Education, Culture & Transparency</h3>
-          <div class="faq-accordion" data-tags="college enroll school one cainta student">
-            <div class="faq-question">25. What courses are offered at One Cainta College? <span>+</span></div>
-            <div class="faq-answer">One Cainta College offers degrees in Technical Vocational Teacher Education, Entrepreneurship, and Information Systems, plus Diploma ladderized programs. <br><a href="services.html#college" class="faq-link">View College Info</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="jobs hiring employment peso work">
-            <div class="faq-question">26. Does the municipality offer job placement help? <span>+</span></div>
-            <div class="faq-answer">Yes, the Public Employment Service Office (PESO) frequently hosts job fairs and assists residents with local and overseas employment. <br><a href="departments.html#dept-peso" class="faq-link">View PESO Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="tourist spots travel visit mall arena park museo">
-            <div class="faq-question">27. What are the best tourist spots in Cainta? <span>+</span></div>
-            <div class="faq-answer">Popular landmarks include the Museo de Cainta, One Cainta Arena, Oval Park, ROTC Grounds, and Sta. Lucia Mall. <br><a href="about_cainta.html#tourist-spots" class="faq-link">View Tourist Carousel</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="history sepoy culture festival senakulo sumbingtik">
-            <div class="faq-question">28. What is the history of the Sepoys in Cainta? <span>+</span></div>
-            <div class="faq-answer">Indian soldiers (Sepoys) settled in Cainta after the Seven Years' War in 1762. Their descendants remain prominent today, deeply influencing our local culture and delicacies. <br><a href="about_cainta.html#history" class="faq-link">Read our Full History</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="birth certificate marriage death lcro registry">
-            <div class="faq-question">29. How can I get a copy of my Birth, Marriage, or Death Certificate? <span>+</span></div>
-            <div class="faq-answer">Request these civil registry documents at the Local Civil Registry Office (LCRO) on the First Floor. Bring a valid ID and pay the processing fee. <br><a href="departments.html#dept-lcro" class="faq-link">View LCRO Office</a>.</div>
-          </div>
-          <div class="faq-accordion" data-tags="budget financial transparency disclosure dilg report">
-            <div class="faq-question">30. Where can I see the municipality's financial reports? <span>+</span></div>
-            <div class="faq-answer">In compliance with DILG directives, all our annual budgets, procurement plans, and financial reports are publicly available for download. <br><a href="disclosure.html" class="faq-link">View Full Disclosure Board</a>.</div>
-          </div>
+          <h3 class="faq-category">6. Transportation & Public Safety</h3>
+          <div class="faq-accordion" data-tags="tricycle franchise toda ctru transport"><div class="faq-question">51. How do I register or renew my tricycle franchise? <span>+</span></div><div class="faq-answer">Tricycle franchising, color-coding, and TODA regulations are processed exclusively by the Cainta Tricycle Regulatory Unit (CTRU). Operating without a franchise will result in impounding. <br><a href="departments.html#dept-ctru" class="faq-link">Go to CTRU Directory</a></div></div>
+          <div class="faq-accordion" data-tags="police hotline safety security pnp"><div class="faq-question">52. What is the hotline for the Cainta Police? <span>+</span></div><div class="faq-answer">For police assistance, crime reporting, or emergencies, you can contact the Cainta PNP directly or coordinate with the 24/7 Municipal Public Safety Office dispatch. <br><a href="departments.html#dept-safety" class="faq-link">View Public Safety Office</a></div></div>
+          <div class="faq-accordion" data-tags="fire station hotline bfp"><div class="faq-question">53. What is the hotline for the Fire Station? <span>+</span></div><div class="faq-answer">For fire emergencies, please call the local Bureau of Fire Protection (BFP) hotline at <strong>8696-2616</strong>. Always state your exact street and nearest landmark.</div></div>
+          <div class="faq-accordion" data-tags="traffic violation ticket redemption"><div class="faq-question">54. Where do I redeem my confiscated license for a traffic violation? <span>+</span></div><div class="faq-answer">Confiscated driver's licenses can be redeemed at the Public Safety Office only upon the settlement and payment of the corresponding fine at the Municipal Treasury window.</div></div>
+          <div class="faq-accordion" data-tags="tricycle fare matrix overcharging complaint"><div class="faq-question">55. Where do I complain about tricycle overcharging? <span>+</span></div><div class="faq-answer">File formal complaints regarding TODA fare matrix violations, arrogant drivers, or refusal to convey passengers at the CTRU office. Please note the tricycle's body number.</div></div>
+          <div class="faq-accordion" data-tags="lost and found tricycle item"><div class="faq-question">56. I left an item in a tricycle. Where do I go? <span>+</span></div><div class="faq-answer">Report the body number and TODA color of the tricycle to the CTRU or your local TODA president's outpost immediately. Most lost items are turned over to the CTRU desk.</div></div>
+          <div class="faq-accordion" data-tags="curfew minors loitering late night"><div class="faq-question">57. Is there a curfew for minors in Cainta? <span>+</span></div><div class="faq-answer">Yes, Cainta strictly implements a curfew for minors from 10:00 PM to 4:00 AM. This is heavily enforced by the PNP and barangay tanods to protect the youth.</div></div>
+          <div class="faq-accordion" data-tags="liquor ban drinking in public alcohol"><div class="faq-question">58. Is drinking alcohol on the streets allowed? <span>+</span></div><div class="faq-answer">No, drinking intoxicating liquor in public streets, sidewalks, and open alleys is strictly prohibited by municipal ordinance and violators will be apprehended.</div></div>
+          <div class="faq-accordion" data-tags="pwd discount tricycle fare senior"><div class="faq-question">59. Do seniors and PWDs get tricycle fare discounts? <span>+</span></div><div class="faq-answer">Yes, by national law and local ordinance, registered PWDs and Senior Citizens are entitled to a 20% fare discount on all local public utility tricycles upon presenting their ID.</div></div>
+          <div class="faq-accordion" data-tags="cctv footage request accident crime"><div class="faq-question">60. How can I request CCTV footage for an accident? <span>+</span></div><div class="faq-answer">To acquire municipal CCTV footage for vehicular accidents or crimes, submit a formal request letter attached with a police blotter report to the MDRRMO Command Center.</div></div>
+
+          <h3 class="faq-category">7. Emergency & Disaster Preparedness</h3>
+          <div class="faq-accordion" data-tags="emergency rescue ambulance fire police contact"><div class="faq-question">61. Who do I call for immediate rescue? <span>+</span></div><div class="faq-answer">For life-threatening emergencies, call the Cainta RESCUE 131 hotline at <strong>8535-0131</strong>. They operate 24/7 with ambulances and rescue equipment on standby. <br><a href="index.html#hotlines" class="faq-link">View all Hotlines</a></div></div>
+          <div class="faq-accordion" data-tags="flood typhoon evacuation mdrrmo shelter center"><div class="faq-question">62. Where are the official evacuation centers during a typhoon? <span>+</span></div><div class="faq-answer">The MDRRMO designates specific public schools, covered courts, and the One Cainta Community Shelter depending on flood severity. Always coordinate with your barangay for the nearest safe zone.</div></div>
+          <div class="faq-accordion" data-tags="relief goods mswd food pack disaster"><div class="faq-question">63. How do we request relief goods after a disaster? <span>+</span></div><div class="faq-answer">Relief operations and food packs are deployed automatically to severely affected barangays and evacuation centers by the MSWD in coordination with the Mayor's Action Team.</div></div>
+          <div class="faq-accordion" data-tags="rescue boat flood emergency 131"><div class="faq-question">64. How do I request a rescue boat during extreme flooding? <span>+</span></div><div class="faq-answer">Immediately call RESCUE 131. The MDRRMO has a fleet of motorized and rubber boats stationed at the command center ready for rapid deployment in flooded subdivisions.</div></div>
+          <div class="faq-accordion" data-tags="siren flood warning alarm mdrrmo"><div class="faq-question">65. What does the loud siren mean during heavy rains? <span>+</span></div><div class="faq-answer">The municipal siren is the MDRRMO's Early Warning System. A continuous siren indicates that river water levels have reached critical status and immediate evacuation is advised.</div></div>
+          <div class="faq-accordion" data-tags="earthquake drill shake hazard"><div class="faq-question">66. Does the LGU conduct earthquake drills? <span>+</span></div><div class="faq-answer">Yes, the MDRRMO actively facilitates the quarterly Nationwide Simultaneous Earthquake Drill (NSED) across all public schools, government buildings, and private businesses in Cainta.</div></div>
+          <div class="faq-accordion" data-tags="first aid training cpr seminar"><div class="faq-question">67. Can our organization request First Aid/CPR training? <span>+</span></div><div class="faq-answer">Yes, homeowners associations and corporate offices can send a formal request letter addressed to the MDRRMO to schedule Basic Life Support (BLS) and First Aid seminars.</div></div>
+          <div class="faq-accordion" data-tags="fire hydrant water pressure bfp"><div class="faq-question">68. Who maintains the fire hydrants? <span>+</span></div><div class="faq-answer">Fire hydrants are maintained by Manila Water in strict coordination with the Bureau of Fire Protection (BFP) to ensure they are pressurized and operational during emergencies.</div></div>
+          <div class="faq-accordion" data-tags="sandbags flood control engineering"><div class="faq-question">69. Does the LGU provide sandbags for residents? <span>+</span></div><div class="faq-answer">Sandbags are primarily utilized for municipal flood control on riverbanks. However, residents can request sandbag assistance from the Engineering office during imminent flood threats.</div></div>
+          <div class="faq-accordion" data-tags="fallen tree electrical wire typhoon"><div class="faq-question">70. Who clears fallen trees blocking the road after a storm? <span>+</span></div><div class="faq-answer">The MDRRMO and MENRO rapid clearing teams are immediately dispatched post-typhoon to chainsaw and remove fallen trees or debris blocking major thoroughfares.</div></div>
+
+          <h3 class="faq-category">8. Civil Registry & Legal</h3>
+          <div class="faq-accordion" data-tags="birth certificate marriage death lcro registry psa"><div class="faq-question">71. How can I get a copy of a Birth, Marriage, or Death Cert? <span>+</span></div><div class="faq-answer">Request certified true copies of these civil registry documents at the Local Civil Registry Office (LCRO). You must bring a valid ID and pay the processing fee at the Treasury. <br><a href="departments.html#dept-lcro" class="faq-link">Go to LCRO Directory</a></div></div>
+          <div class="faq-accordion" data-tags="marriage license wedding lcro"><div class="faq-question">72. How do we apply for a Marriage License? <span>+</span></div><div class="faq-answer">Couples must first attend the Pre-Marriage Counseling seminar at the MSWD. Afterward, submit the counseling certificate along with your birth certificates/CENOMAR to the LCRO.</div></div>
+          <div class="faq-accordion" data-tags="delayed registration birth certificate lcro"><div class="faq-question">73. How do I file for delayed registration of birth? <span>+</span></div><div class="faq-answer">For late registrations, you need a PSA Negative Certification, a Baptismal Certificate, and a joint affidavit of two disinterested persons to process the application at the LCRO.</div></div>
+          <div class="faq-accordion" data-tags="notary public legal office free"><div class="faq-question">74. Does the LGU provide free notary services? <span>+</span></div><div class="faq-answer">The Municipal Legal Office provides free notarization exclusively for simple affidavits (like Affidavit of Loss) needed by indigent residents acquiring specific LGU services.</div></div>
+          <div class="faq-accordion" data-tags="legitimation child born out of wedlock"><div class="faq-question">75. How do I process the legitimation of a child? <span>+</span></div><div class="faq-answer">Parents who married *after* their child's birth can legitimize the child's status by filing a joint Affidavit of Legitimation at the LCRO where the birth was registered.</div></div>
+          <div class="faq-accordion" data-tags="change of name clerical error ra 9048"><div class="faq-question">76. How do I correct a misspelled name on my birth certificate? <span>+</span></div><div class="faq-answer">Under RA 9048, you can file a petition for the correction of a clerical or typographical error directly at the LCRO without needing a judicial court order.</div></div>
+          <div class="faq-accordion" data-tags="ordinance resolution law legal copy"><div class="faq-question">77. Where can I get a copy of a local ordinance? <span>+</span></div><div class="faq-answer">Certified copies of approved municipal ordinances and resolutions can be requested from the Sangguniang Bayan Secretariat or the Legal Office for legal or academic purposes.</div></div>
+          <div class="faq-accordion" data-tags="barangay clearance validity expiration"><div class="faq-question">78. How long is a Barangay Clearance valid? <span>+</span></div><div class="faq-answer">Unless specified otherwise for a specific transaction, a standard Barangay Clearance is generally valid for six (6) months from its date of issuance.</div></div>
+          <div class="faq-accordion" data-tags="police clearance nbi hit"><div class="faq-question">79. Do you issue National Police Clearances? <span>+</span></div><div class="faq-answer">Yes, the Cainta Municipal Police Station is equipped to process, capture biometrics, and issue the integrated National Police Clearance.</div></div>
+          <div class="faq-accordion" data-tags="data privacy act information security"><div class="faq-question">80. Is my personal data secure with the LGU? <span>+</span></div><div class="faq-answer">Absolutely. The municipality strictly adheres to the Data Privacy Act of 2012, ensuring all physical and digital records are protected against unauthorized access. <br><a href="privacy.html" class="faq-link">Read our Privacy Policy</a></div></div>
+
+          <h3 class="faq-category">9. Education, Youth & Jobs</h3>
+          <div class="faq-accordion" data-tags="college enroll school one cainta student"><div class="faq-question">81. What courses are offered at One Cainta College? <span>+</span></div><div class="faq-answer">One Cainta College provides full bachelor's degrees in Tech-Voc Teacher Education, Entrepreneurship, and Information Systems, alongside highly sought-after IT and Office Management Diploma programs. <br><a href="services.html#college" class="faq-link">View College Information</a></div></div>
+          <div class="faq-accordion" data-tags="scholarship students youth cydo"><div class="faq-question">82. Does the municipality offer scholarships? <span>+</span></div><div class="faq-answer">Yes, comprehensive educational grants and financial assistance for deserving students are facilitated through the Youth Development Office (CYDO) and the Mayor's Office.</div></div>
+          <div class="faq-accordion" data-tags="jobs hiring employment peso work"><div class="faq-question">83. Does the LGU offer job placement help? <span>+</span></div><div class="faq-answer">Yes, the Public Employment Service Office (PESO) frequently hosts mega job fairs and assists residents with job matching for both local and overseas employment opportunities. <br><a href="departments.html#dept-peso" class="faq-link">Go to PESO Directory</a></div></div>
+          <div class="faq-accordion" data-tags="spes summer job student employment peso"><div class="faq-question">84. Is there a summer job program for students? <span>+</span></div><div class="faq-answer">Yes, PESO runs the Special Program for Employment of Students (SPES) during summer breaks, giving students a chance to earn money for tuition by working in LGU offices.</div></div>
+          <div class="faq-accordion" data-tags="als alternative learning system out of school"><div class="faq-question">85. How do I enroll in the Alternative Learning System (ALS)? <span>+</span></div><div class="faq-answer">ALS enrollment for out-of-school youth and adults is coordinated through the DepEd District Office and the education committees of your respective barangay.</div></div>
+          <div class="faq-accordion" data-tags="public library books reading study"><div class="faq-question">86. Is there a public library in Cainta? <span>+</span></div><div class="faq-answer">Yes, the Cainta Municipal Library is open to all residents, students, and researchers providing a quiet space for reading, studying, and free internet access for academics.</div></div>
+          <div class="faq-accordion" data-tags="daycare center kinder child early education"><div class="faq-question">87. How do I enroll my child in a public Daycare? <span>+</span></div><div class="faq-answer">Enrollment for public Child Development Centers (Daycare) is handled directly by the MSWD workers stationed at your local barangay hall before the school year begins.</div></div>
+          <div class="faq-accordion" data-tags="sports arena basketball court reservation"><div class="faq-question">88. How do I reserve the One Cainta Arena? <span>+</span></div><div class="faq-answer">Reservations for municipal sporting facilities, including the One Cainta Arena and public basketball courts, are managed by the Sports Development Office to prevent schedule conflicts.</div></div>
+          <div class="faq-accordion" data-tags="youth organization sk sangguniang kabataan"><div class="faq-question">89. How do I register a youth organization? <span>+</span></div><div class="faq-answer">Local youth organizations and fraternities must be accredited through the Local Youth Development Office (CYDO) to participate in municipal events and acquire funding support.</div></div>
+          <div class="faq-accordion" data-tags="anti drug abuse cadac rehab seminar"><div class="faq-question">90. Does the LGU have an anti-drug program? <span>+</span></div><div class="faq-answer">Yes, the Cainta Anti-Drug Abuse Council (CADAC) handles community symposiums, drug-clearing operations, and facilitates rehabilitation assistance for drug surrenderers.</div></div>
+
+          <h3 class="faq-category">10. Culture, Tourism & E-Services</h3>
+          <div class="faq-accordion" data-tags="tourist spots travel visit mall arena park museo"><div class="faq-question">91. What are the best tourist spots in Cainta? <span>+</span></div><div class="faq-answer">Top landmarks include the Museo de Cainta, One Cainta Arena, Oval Park, the historic ROTC Grounds, and the pioneering Sta. Lucia Mall. <br><a href="index.html#tourist-spots" class="faq-link">Explore the Tourist Carousel</a></div></div>
+          <div class="faq-accordion" data-tags="history sepoy culture festival senakulo sumbingtik"><div class="faq-question">92. What is the history of the Sepoys in Cainta? <span>+</span></div><div class="faq-answer">Indian soldiers (Sepoys) settled in Cainta after the Seven Years' War in 1762. Their descendants remain prominent today, deeply influencing our local culture and famous delicacies like Bibingka. <br><a href="about_cainta.html#history" class="faq-link">Read our Full History</a></div></div>
+          <div class="faq-accordion" data-tags="museo de cainta entrance fee open hours"><div class="faq-question">93. Is there an entrance fee for Museo de Cainta? <span>+</span></div><div class="faq-answer">No, entrance to the municipal museum is completely free for all visitors, students, and tourists wishing to learn about the rich tapestry of our town's past.</div></div>
+          <div class="faq-accordion" data-tags="sumbingtik festival bibingka suman latik"><div class="faq-question">94. When is the Sumbingtik Festival? <span>+</span></div><div class="faq-answer">The Sumbingtik Festival—a portmanteau of Suman, Bibingka, and Latik—is celebrated grandly every December 1 alongside the town's founding anniversary.</div></div>
+          <div class="faq-accordion" data-tags="budget financial transparency disclosure dilg report"><div class="faq-question">95. Where can I see the municipality's financial reports? <span>+</span></div><div class="faq-answer">In strict compliance with DILG transparency directives, all our annual budgets, procurement plans, and financial reports are publicly available for download on our portal. <br><a href="disclosure.html" class="faq-link">View Full Disclosure Board</a></div></div>
+          <div class="faq-accordion" data-tags="e-payment portal online payment receipt"><div class="faq-question">96. Will I get a digital receipt for online payments? <span>+</span></div><div class="faq-answer">Yes, an electronic official receipt (e-OR) will be sent to your registered email address immediately upon a successful transaction in the E-Payment Portal.</div></div>
+          <div class="faq-accordion" data-tags="cooperative loan business loan mcdo"><div class="faq-question">97. Does the LGU offer assistance for small cooperatives? <span>+</span></div><div class="faq-answer">Yes, the Cooperative & Development Office provides foundational seminars, legal accreditation assistance, and livelihood programs for aspiring local cooperatives. <br><a href="departments.html#dept-coop" class="faq-link">View Coop Office</a></div></div>
+          <div class="faq-accordion" data-tags="pet adoption pound vet animal dog cat"><div class="faq-question">98. Can I adopt a dog from the municipal pound? <span>+</span></div><div class="faq-answer">Yes! We strongly encourage adoption. The Municipal Veterinary Office regularly rehabilitates impounded pets and puts them up for adoption to loving homes.</div></div>
+          <div class="faq-accordion" data-tags="e gov app mobile ph"><div class="faq-question">99. Is Cainta integrated with the eGov PH app? <span>+</span></div><div class="faq-answer">Yes, several local LGU services, digital ID integrations, and VaxCert verifications are accessible and streamlined via the national eGov App platform.</div></div>
+          <div class="faq-accordion" data-tags="information desk inquiries ask questions"><div class="faq-question">100. I still have a question not listed here. Who can I ask? <span>+</span></div><div class="faq-answer">You may approach the physical Municipal Info Desk at the main lobby, use our Contact Form, or interact with our digital Chat Assistant floating on your screen right now!</div></div>
 
         </div>
       </div>
@@ -241,9 +236,9 @@
             <div class="link-col">
               <h4>Support</h4>
               <a href="index.html#hotlines">Hotlines</a>
-              <a class="info-trigger" data-target-info="departments" style="cursor:pointer;">Departments</a>
+              <a href="departments.html">Departments</a>
               <a href="about_cainta.html#barangays">Barangays</a>
-              <a href="faq.html">FAQ</a>
+              <a href="faq.html" class="active-nav">FAQ</a>
             </div>
             <div class="link-col">
               <h4>Government</h4>
@@ -287,13 +282,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
   <script>
-    // FAQ Accordion Logic
+    // Exclusive FAQ Accordion Logic
+    const allAccordions = document.querySelectorAll('.faq-accordion');
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
-            const accordion = button.parentElement;
-            accordion.classList.toggle('active');
-            const span = button.querySelector('span');
-            span.textContent = accordion.classList.contains('active') ? '-' : '+';
+            const currentAccordion = button.parentElement;
+            const isActive = currentAccordion.classList.contains('active');
+            allAccordions.forEach(acc => { acc.classList.remove('active'); acc.querySelector('span').textContent = '+'; });
+            if (!isActive) { currentAccordion.classList.add('active'); button.querySelector('span').textContent = '-'; }
         });
     });
 
@@ -301,29 +297,18 @@
     const faqSearch = document.getElementById('faqSearch');
     const faqs = document.querySelectorAll('.faq-accordion');
     const categories = document.querySelectorAll('.faq-category');
-
     faqSearch.addEventListener('keyup', (e) => {
         const query = e.target.value.toLowerCase();
-        
         faqs.forEach(faq => {
             const text = faq.textContent.toLowerCase();
             const tags = faq.getAttribute('data-tags') || "";
-            if (text.includes(query) || tags.includes(query)) {
-                faq.style.display = 'block';
-            } else {
-                faq.style.display = 'none';
-            }
+            faq.style.display = (text.includes(query) || tags.includes(query)) ? 'block' : 'none';
         });
-
-        // Hide categories if all their children are hidden
         categories.forEach(category => {
             let nextEl = category.nextElementSibling;
             let hasVisibleFaq = false;
             while (nextEl && nextEl.classList.contains('faq-accordion')) {
-                if (nextEl.style.display !== 'none') {
-                    hasVisibleFaq = true;
-                    break;
-                }
+                if (nextEl.style.display !== 'none') { hasVisibleFaq = true; break; }
                 nextEl = nextEl.nextElementSibling;
             }
             category.style.display = hasVisibleFaq ? 'block' : 'none';

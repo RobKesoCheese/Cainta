@@ -706,6 +706,20 @@ html { scroll-padding-top: 140px; }
   border-radius: 2px;
 }
 
+.site-footer a.active-nav {
+  position: relative;
+}
+.site-footer a.active-nav::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
 /* ===== MOBILE SERVICES ACCESSIBILITY FIX ===== */
 @media (max-width: 1024px) {
   .services-grid {
@@ -784,3 +798,6 @@ html { scroll-padding-top: 140px; }
     border-color: var(--text-blue);
     transform: translateY(-2px);
 }
+
+.site-footer a:hover, .site-footer a.active-nav { color: var(--text-blue) !important; }
+.site-footer a { color: var(--text-main) !important; font-weight: 600; }
